@@ -86,19 +86,16 @@ header {
 #meet {
     display: flex;
     justify-content: space-evenly;
-    background: url(img/sourire.png) no-repeat bottom 30px left 60px, url(img/doigts.png) no-repeat top 250px right 80px, url(img/coeurs.png) no-repeat right bottom 130px, url(img/question4.png) no-repeat right 150px bottom;
+    background: url(img/sourire.png) no-repeat bottom 30px left 60px, url(img/doigts.png) no-repeat top 200px right 80px, url(img/coeurs.png) no-repeat right bottom 130px, url(img/question4.png) no-repeat right 150px bottom;
     padding-bottom: 100px;
 }
 
 #phoneVideo {
     position: relative;
-    width: 300px;
-    height: 620px;
-    transform: rotate(-90deg);
+    width: 350px;
     top: 50px;
+    /* border: solid red 1px; */
 }
-
-
 
 #phoneVideo #phoneBorder {
     position: absolute;
@@ -106,10 +103,35 @@ header {
 
 #phoneVideo video {
     position: absolute;
-    left: 151px;
-    top: 26px;
+    left: 43px;
+    top: 14px;
     background: black;
     border-radius: 25px;
+    z-index: 2;
+}
+
+.phoneOnScreen {
+    animation-name: phoneRotateOnScreen;
+    animation-duration: 1s;
+    transform: rotate(0deg);
+}
+
+@keyframes phoneRotateOnScreen {
+    from {
+        transform: rotate(-90deg);
+    }
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes phoneRotateNotOnScreen {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-90deg)
+    }
 }
 
 #texte #splitchLogo {
@@ -158,14 +180,13 @@ header {
 /********** Connect Section **********/
 
 #connect {
-    padding-right: 8%;
     margin-bottom: 100px;
 }
 
 #connect h1 {
     width: max-content;
     margin-left: auto;
-    margin-right: 100px;
+    margin-right: 200px;
 }
 
 #messagesIconAndVideo {
@@ -200,11 +221,12 @@ header {
 
 #phoneVideo2 {
     position: relative;
-    width: 300px;
-    height: 620px;
+    width: 350px;
+    height: 570px;
     transform: rotate(11deg);
     top: 50px;
-    right: 15%;
+    right: 10%;
+    /* border: solid 1px red; */
 }
 
 #phoneVideo2 #phoneBorder2 {
@@ -213,10 +235,11 @@ header {
 
 #phoneVideo2 video {
     position: absolute;
-    left: 151px;
-    top: 26px;
+    left: 43px;
+    top: 14px;
     background: black;
     border-radius: 25px;
+    z-index: 2;
 }
 
 /********** All tags (Passions section, WhatTalk section, WhatTag section **********/
@@ -262,10 +285,7 @@ header {
 
 .selectedTag {
     background-image: linear-gradient(to left, #ce16d7, #8d6bff, #2992ff, #0bbef0);
-}
-
-.selectedTag:hover {
-    background-image: none;
+    color: white;
 }
 
 /********** Exchange section **********/
