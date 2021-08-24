@@ -1,0 +1,459 @@
+@font-face {
+    font-family: "ProximaSoft";
+    src: url('/font/ProximaSoft-Bold.woff2');
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url('/font/Gilroy-Light.otf');
+}
+
+@font-face {
+    font-family: "Gilroy_Bold";
+    src: url('/font/Gilroy-ExtraBold.otf');
+}
+
+header, footer {
+    height: 66px;
+    background-image: url(img/topbar.png);
+    background-size: cover;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'Gilroy', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1:not(header h1):not(.tagH1) {
+    font-size: 58px;
+    background: linear-gradient(to right, #ce16d7, #8d6bff, #2992ff, #00acff, #0bbef0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 47px;
+    margin-bottom: 30px;
+}
+
+h1, h3 {
+    font-family: 'ProximaSoft', sans-serif;
+}
+
+h3 {
+    color: white;
+}
+
+/**************** header ****************/
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+/********** Meet Section **********/
+
+#meet {
+    display: flex;
+    justify-content: space-evenly;
+    background: url(img/sourire.png) no-repeat bottom 30px left 60px, url(img/doigts.png) no-repeat top 250px right 80px, url(img/coeurs.png) no-repeat right bottom 130px, url(img/question4.png) no-repeat right 150px bottom;
+    padding-bottom: 100px;
+}
+
+#phoneVideo {
+    position: relative;
+    width: 300px;
+    height: 620px;
+    transform: rotate(346deg);
+    top: 50px;
+}
+
+#phoneVideo #phoneBorder {
+    position: absolute;
+}
+
+#phoneVideo video {
+    position: absolute;
+    left: 151px;
+    top: 26px;
+    background: black;
+}
+
+#texte #splitchLogo {
+    width: 800px;
+    margin-bottom: 20px;
+}
+
+#texte h1, #texte p {
+    margin-left: 140px;
+}
+
+#texte p {
+    line-height: 2.5;
+    margin-bottom: 40px;
+    color: #363A65;
+}
+
+#texte a {
+    margin-left: 200px;
+    font-family: 'ProximaSoft', sans-serif;
+}
+
+#texte a img {
+    width: 195px;
+}
+
+/********** Share Section **********/
+
+#share {
+    padding-bottom: 100px;
+    margin-bottom: 50px;
+    padding-left: 2%;
+    position: relative;
+    background: url(img/background5.png) no-repeat right top, url(img/background4.png) no-repeat right bottom;
+}
+
+#share h1 {
+    margin-left: 50px;
+}
+
+#shareSlider img:not(#sliderPlus) {
+    width: 250px;
+    margin-right: 20px;
+}
+
+#sliderPlus {
+    position: absolute;
+    width: 200px;
+    right: 120px;
+    top: 235px;
+}
+
+/********** Connect Section **********/
+
+#connect {
+    padding-right: 8%;
+    margin-bottom: 100px;
+}
+
+#connect h1 {
+    width: max-content;
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+#messagesIconAndVideo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url(img/background1.png) no-repeat top -20px left 28%, url(img/background2.png) no-repeat top 200px left;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+}
+
+#messages :nth-child(1) {
+    margin-left: 50px;
+}
+
+#messages :nth-child(2) {
+    margin-left: 0;
+}
+
+#messages :nth-child(3) {
+    margin-left: 100px;
+}
+
+#icon {
+    border-radius: 100%;
+    margin-left: -10%;
+    box-shadow: 4px 4px 13px -1px rgba(0, 0, 0, 0.11);
+}
+
+#phoneVideo2 {
+    position: relative;
+    width: 300px;
+    height: 620px;
+    transform: rotate(11deg);
+    top: 50px;
+    right: 15%;
+}
+
+#phoneVideo2 #phoneBorder2 {
+    position: absolute;
+}
+
+#phoneVideo2 video {
+    position: absolute;
+    left: 151px;
+    top: 26px;
+    background: black;
+}
+
+/********** All tags (Passions section, WhatTalk section, WhatTag section **********/
+
+#tags h1, #passions h1, #WhatTalk h1, #cherche h1 {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-size: 44px;
+    margin-left: 6%;
+    color: #363A65;
+}
+
+#tags p, #passions p, #WhatTalk p, #cherche p {
+    font-family: "Gilroy_Bold", sans-serif;
+}
+
+.lineTags {
+    justify-content: center;
+    display: flex
+}
+
+.lineTags p {
+    margin-left: 2%;
+    margin-bottom: 20px;
+    padding: 15px 35px;
+    box-shadow: 4px 4px 13px -1px rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+}
+
+.lineTags p:hover {
+    background-image: linear-gradient(to right, #ce16d7, #8d6bff, #2992ff, #00acff, #0bbef0);
+    -webkit-transition: background-image 1s ease-in-out;
+    transition: background-image 1s ease-in-out;
+    cursor: pointer;
+    color: white;
+}
+
+/********** Exchange section **********/
+
+/********** Find section **********/
+
+/********** Stat section **********/
+
+/********** Test section **********/
+
+/********** Footer **********/
+
+footer {
+    display: flex;
+    align-items: center;
+}
+
+footer p {
+    margin-left: 5%;
+    font-family: "Gilroy_Bold", sans-serif;
+}
+
+/************************************* OLD *************************************/
+
+#ajours {
+    font-family: 'ProximaSoft', sans-serif;
+}
+
+#question1 {
+    position: relative;
+    z-index: 2;
+    margin-top: 15%;
+    margin-left: 5%
+}
+
+#lea {
+    margin-top: -35%;
+    margin-left: 35%;
+}
+
+#etoile {
+    position: relative;
+    bottom: 15%;
+}
+
+#doigts {
+    position: relative;
+    bottom: 10%;
+    left: 25%;
+}
+
+#coeurs {
+    position: relative;
+    left: 30%;
+    top: 15%;
+}
+
+#sourire {
+    position: relative;
+    top: 15%;
+    left: 55%;
+}
+
+#question2 {
+    position: relative;
+    top: 40%;
+    left: 0%;
+}
+
+#splitch {
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+#partner_splitch {
+    display: flex;
+}
+
+#title_partner {
+    background: linear-gradient(to right, #ce16d7, #8d6bff, #2992ff, #00acff, #0bbef0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 15%;
+    width: max-content;
+    font-size: 47px;
+    margin-left: 15%;
+}
+
+#background1 {
+    position: relative;
+    bottom: 25%;
+    z-index: -1;
+}
+
+#background2 {
+    position: relative;
+    top: -40%;
+}
+
+#force {
+    position: relative;
+    bottom: 21%;
+    left: 30%;
+    z-index: 2;
+}
+
+#photo_partner {
+    position: relative;
+    margin-left: 18%;
+    top: -3%;
+}
+
+#backgroundphoto {
+    position: relative;
+    bottom: 45%;
+    left: 34%;
+    z-index: -1;
+}
+
+#coeur {
+    bottom: 42%;
+    position: relative;
+}
+
+#question3 {
+    position: relative;
+    bottom: 55%;
+    left: 25%;
+}
+
+#jours {
+    margin-top: -42%;
+    margin-bottom: -15%;
+}
+
+#text_jour {
+    z-index: -1;
+}
+
+#h1jours {
+    background: linear-gradient(to right, #ce16d7, #8d6bff, #2992ff, #00acff, #0bbef0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    bottom: 50%;
+    font-size: 47px;
+    width: 450px;
+    left: 12%;
+}
+
+#pjours {
+    left: 12%;
+    line-height: 3.5;
+    width: 400px;
+    position: relative;
+    bottom: 50%;
+}
+
+#ajours {
+    position: relative;
+    bottom: 45%;
+    left: 40%;
+}
+
+#passions {
+    margin-top: 55px;
+}
+
+/* a {
+    padding: 15px 35px;
+    box-shadow: 4px 4px 13px -1px rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #ce16d7, #8d6bff, #2992ff, #00acff, #0bbef0);
+    color: white;
+} */
+
+/* #backstat {
+    margin-left: 25%
+} */
+
+/* 
+#h1stat {
+    background: linear-gradient(to right, #ce16d7, #8d6bff, #2992ff, #00acff, #0bbef0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 420px;
+    position: relative;
+    z-index: 2;
+    left: 35%;
+    bottom: 55%;
+    font-size: 47px;
+}
+
+#pstat {
+    position: relative;
+    bottom: 50%;
+    left: 35%;
+    width: 450px;
+    line-height: 2.5;
+}
+
+#photostat {
+    position: relative;
+    right: 25%;
+    bottom: 15%;
+}
+
+#stat {
+    margin-top: 135px;
+}
+
+#statdiv {
+    display: flex;
+} */
+
+/* .iconquest {
+    vertical-align: middle;
+}
+
+div#partner_splitch {
+    margin-bottom: 75px;
+} */
