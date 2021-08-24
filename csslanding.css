@@ -25,8 +25,10 @@ header, footer {
     padding: 0;
 }
 
-p {
+p:not(.lineTags p, footer p) {
     font-family: 'Gilroy', sans-serif;
+    line-height: 2.5;
+    color: #363A65;
 }
 
 a {
@@ -35,7 +37,8 @@ a {
 
 h1:not(header h1):not(.tagH1) {
     font-size: 58px;
-    background: linear-gradient(to right, #ce16d7, #8d6bff, #2992ff, #00acff, #0bbef0);
+    width: max-content;
+    background: linear-gradient(to left, #ce16d7, #8d6bff, #2992ff, #0bbef0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 47px;
@@ -48,6 +51,25 @@ h1, h3 {
 
 h3 {
     color: white;
+}
+
+.downloadButon {
+    background: linear-gradient(to left, #ce16d7, #8d6bff, #2992ff, #0bbef0);
+    -webkit-background-clip: text, border-box;
+    -webkit-text-fill-color: transparent;
+    font-family: 'ProximaSoft', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 15px 35px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.downloadButon:hover {
+    background: linear-gradient(to left, #ce16d7, #8d6bff, #2992ff, #0bbef0);
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: white;
+    cursor: pointer;
 }
 
 /**************** header ****************/
@@ -72,9 +94,11 @@ header {
     position: relative;
     width: 300px;
     height: 620px;
-    transform: rotate(346deg);
+    transform: rotate(-90deg);
     top: 50px;
 }
+
+
 
 #phoneVideo #phoneBorder {
     position: absolute;
@@ -85,6 +109,7 @@ header {
     left: 151px;
     top: 26px;
     background: black;
+    border-radius: 25px;
 }
 
 #texte #splitchLogo {
@@ -97,18 +122,11 @@ header {
 }
 
 #texte p {
-    line-height: 2.5;
     margin-bottom: 40px;
-    color: #363A65;
 }
 
-#texte a {
+#texte .downloadButon {
     margin-left: 200px;
-    font-family: 'ProximaSoft', sans-serif;
-}
-
-#texte a img {
-    width: 195px;
 }
 
 /********** Share Section **********/
@@ -198,11 +216,16 @@ header {
     left: 151px;
     top: 26px;
     background: black;
+    border-radius: 25px;
 }
 
 /********** All tags (Passions section, WhatTalk section, WhatTag section **********/
 
-#tags h1, #passions h1, #WhatTalk h1, #cherche h1 {
+#passions, #WhatTalk, #WhatTag {
+    margin-bottom: 100px;
+}
+
+#tags h1, #passions h1, #WhatTalk h1, #WhatTag h1 {
     margin-bottom: 25px;
     margin-top: 25px;
     font-size: 44px;
@@ -210,7 +233,7 @@ header {
     color: #363A65;
 }
 
-#tags p, #passions p, #WhatTalk p, #cherche p {
+#tags p, #passions p, #WhatTalk p, #WhatTag p {
     font-family: "Gilroy_Bold", sans-serif;
 }
 
@@ -229,20 +252,123 @@ header {
 }
 
 .lineTags p:hover {
-    background-image: linear-gradient(to right, #ce16d7, #8d6bff, #2992ff, #00acff, #0bbef0);
+    background-image: linear-gradient(to left, #ce16d7, #8d6bff, #2992ff, #0bbef0);
     -webkit-transition: background-image 1s ease-in-out;
+    -moz-transition: background-image 1s ease-in-out;
     transition: background-image 1s ease-in-out;
     cursor: pointer;
     color: white;
 }
 
+.selectedTag {
+    background-image: linear-gradient(to left, #ce16d7, #8d6bff, #2992ff, #0bbef0);
+}
+
+.selectedTag:hover {
+    background-image: none;
+}
+
 /********** Exchange section **********/
+
+#exchange {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+#exchText p {
+    Font-size: 16px;
+    color: #363A65;
+    Line-height: 40px;
+}
+
+#exchImageAndIcons {
+    transform: rotate(6.83deg);
+}
+
+#exchIcons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+#exchIcons :nth-child(2) {
+    margin-top: 30px;
+}
 
 /********** Find section **********/
 
+#find {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+
+#findImg {
+    position: relative;
+    width: 554px;
+    height: 547px;
+    /* border: solid 1px red; */
+}
+
+#findImg img {
+    position: absolute;
+}
+
+#findImg img:nth-of-type(1) {
+    z-index: 3;
+    top: 50px;
+}
+
+#findImg img:nth-of-type(2) {
+    z-index: 2;
+    top: 15px;
+    left: 40px;
+}
+
+#findImg img:nth-of-type(3) {
+    z-index: 1;
+}
+
 /********** Stat section **********/
 
+#stat {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+
+#statText h1 {
+    font-size: 58px;
+}
+
 /********** Test section **********/
+
+#test {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+
+#testText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#testText img {
+    width: 117px;
+    margin-bottom: 20px;
+}
+
+#testText p {
+    margin-bottom: 20px;
+}
 
 /********** Footer **********/
 
@@ -255,205 +381,3 @@ footer p {
     margin-left: 5%;
     font-family: "Gilroy_Bold", sans-serif;
 }
-
-/************************************* OLD *************************************/
-
-#ajours {
-    font-family: 'ProximaSoft', sans-serif;
-}
-
-#question1 {
-    position: relative;
-    z-index: 2;
-    margin-top: 15%;
-    margin-left: 5%
-}
-
-#lea {
-    margin-top: -35%;
-    margin-left: 35%;
-}
-
-#etoile {
-    position: relative;
-    bottom: 15%;
-}
-
-#doigts {
-    position: relative;
-    bottom: 10%;
-    left: 25%;
-}
-
-#coeurs {
-    position: relative;
-    left: 30%;
-    top: 15%;
-}
-
-#sourire {
-    position: relative;
-    top: 15%;
-    left: 55%;
-}
-
-#question2 {
-    position: relative;
-    top: 40%;
-    left: 0%;
-}
-
-#splitch {
-    margin: auto;
-    margin-bottom: 50px;
-}
-
-#partner_splitch {
-    display: flex;
-}
-
-#title_partner {
-    background: linear-gradient(to right, #ce16d7, #8d6bff, #2992ff, #00acff, #0bbef0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-top: 15%;
-    width: max-content;
-    font-size: 47px;
-    margin-left: 15%;
-}
-
-#background1 {
-    position: relative;
-    bottom: 25%;
-    z-index: -1;
-}
-
-#background2 {
-    position: relative;
-    top: -40%;
-}
-
-#force {
-    position: relative;
-    bottom: 21%;
-    left: 30%;
-    z-index: 2;
-}
-
-#photo_partner {
-    position: relative;
-    margin-left: 18%;
-    top: -3%;
-}
-
-#backgroundphoto {
-    position: relative;
-    bottom: 45%;
-    left: 34%;
-    z-index: -1;
-}
-
-#coeur {
-    bottom: 42%;
-    position: relative;
-}
-
-#question3 {
-    position: relative;
-    bottom: 55%;
-    left: 25%;
-}
-
-#jours {
-    margin-top: -42%;
-    margin-bottom: -15%;
-}
-
-#text_jour {
-    z-index: -1;
-}
-
-#h1jours {
-    background: linear-gradient(to right, #ce16d7, #8d6bff, #2992ff, #00acff, #0bbef0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: relative;
-    bottom: 50%;
-    font-size: 47px;
-    width: 450px;
-    left: 12%;
-}
-
-#pjours {
-    left: 12%;
-    line-height: 3.5;
-    width: 400px;
-    position: relative;
-    bottom: 50%;
-}
-
-#ajours {
-    position: relative;
-    bottom: 45%;
-    left: 40%;
-}
-
-#passions {
-    margin-top: 55px;
-}
-
-/* a {
-    padding: 15px 35px;
-    box-shadow: 4px 4px 13px -1px rgba(0, 0, 0, 0.11);
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    background-image: linear-gradient(to right, #ce16d7, #8d6bff, #2992ff, #00acff, #0bbef0);
-    color: white;
-} */
-
-/* #backstat {
-    margin-left: 25%
-} */
-
-/* 
-#h1stat {
-    background: linear-gradient(to right, #ce16d7, #8d6bff, #2992ff, #00acff, #0bbef0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    width: 420px;
-    position: relative;
-    z-index: 2;
-    left: 35%;
-    bottom: 55%;
-    font-size: 47px;
-}
-
-#pstat {
-    position: relative;
-    bottom: 50%;
-    left: 35%;
-    width: 450px;
-    line-height: 2.5;
-}
-
-#photostat {
-    position: relative;
-    right: 25%;
-    bottom: 15%;
-}
-
-#stat {
-    margin-top: 135px;
-}
-
-#statdiv {
-    display: flex;
-} */
-
-/* .iconquest {
-    vertical-align: middle;
-}
-
-div#partner_splitch {
-    margin-bottom: 75px;
-} */

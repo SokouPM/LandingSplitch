@@ -15,22 +15,22 @@
     <header id="topbar">
         <h1> Splitch</h1>
         <img id="toplogo" src='img/logo.png'>
-        <h3> Télécharger l'App</h3>
+        <h3>Télécharger l'App</h3>
     </header>
 
     <section id="meet">
         <div id="phoneVideo">
-            <video src="img/videosplitch.mp4" controls autoplay loop width="247" height="525"></video>
+            <video src="img/videosplitch.mp4" loop width="247" height="525"></video>
             <img id="phoneBorder" src="img/telephone2.png">
         </div>
         <div id="texte">
             <img id="splitchLogo" src=img/splitch.png>
             <h1>Fais des rencontres<br> autrement,</h1>
             <p>Le premier réseau social qui te propose de rencontrer<br> des gens qui partagent les mêmes centres
-                d’intérêts<br>
-                que toi.</p>
-            <a href="#"><img src="img/bouton_je_telecharge.png" alt="Je télécharge"></a>
-            <!-- <a href="#">Je télécharge</a> -->
+                d’intérêts<br> que toi.</p>
+            <div class="borderButton">
+                <a class="downloadButon">Je télécharge</a>
+            </div>
         </div>
     </section>
 
@@ -57,7 +57,7 @@
             </div>
             <div id="icon"><img src="img/SplitchIcon.png" alt=""></div>
             <div id="phoneVideo2">
-                <video src="img/videosplitch.mp4" controls autoplay loop width="247" height="525"></video>
+                <video src="img/videosplitch.mp4" loop width="247" height="525"></video>
                 <img id="phoneBorder2" src="img/telephone2.png">
             </div>
         </div>
@@ -91,8 +91,18 @@
     </section>
 
     <section id="exchange">
-        <!-- TODO -->
-        <p style="text-align: center;">Coming : exchange section</p>
+        <div id="exchText">
+            <h1>Échange, propose une<br> sortie ou lance un jeu !</h1>
+            <p>Plutôt d’humeur à discuter, faire une sortie ou lancer un jeu ?<br> À toi de choisir !</p>
+        </div>
+        <div id="exchImageAndIcons">
+            <img src="img/exchImg.png" alt="">
+            <div id="exchIcons">
+                <img src="img/exchIcon1.png" alt="">
+                <img src="img/exchIcon3.png" alt="">
+                <img src="img/exchIcon2.png" alt="">
+            </div>
+        </div>
     </section>
 
     <section id="WhatTalk">
@@ -122,11 +132,19 @@
     </section>
 
     <section id="find">
-        <!-- TODO -->
-        <p style="text-align: center;">Coming : find section</p>
+        <div id="findImg">
+            <img src="img/findImg2.png" alt="">
+            <img src="img/findImg1.png" alt="">
+            <img src="img/findImg3.png" alt="">
+        </div>
+        <div id="findText">
+            <h1>Trouves ton partner<br> in crime</h1>
+            <p>Flash avec des gens avec qui tu as plein de points<br> communs, après à toi de choisir : pote de
+                sortie,<br> meilleur(e) ami(e), double de jeu, ...</p>
+        </div>
     </section>
 
-    <section id="tags">
+    <section id="WhatTag">
         <h1 class="tagH1"> <img class="iconquest" src="img/icon_question.png"> Plutot quel tag pour toi ?</h1>
         <div class="lineTags">
             <p>Good vibes</p>
@@ -146,8 +164,8 @@
     </section>
 
     <section id="stat">
-        <div>
-            <h1>98% des rencontres<br> chez nous ne finiront jamais.</h1>
+        <div id="statText">
+            <h1>98% des rencontres<br> chez nous ne finiront<br> jamais.</h1>
             <p id="pstat">Parce que nous concevons une safe place avec des gens ultra<br> cool, tu rencontreras des gens
                 authentiques avec qui tu pourras<br> partager tous tes centres d’intérêts.</p>
         </div>
@@ -155,86 +173,18 @@
     </section>
 
     <section id="test">
-        <!-- TODO -->
-        <p style="text-align: center;">Coming : test section</p>
+        <img src="img/SplitchIconSquare.png" alt="">
+        <div id="testText">
+            <img src="img/splitchColor.png" alt="">
+            <p>Soit le premier à tester l’app et reçoit un badge exclusif “Précurseur”<br> dès le lancement ! Le badge
+                sera valable à vie.</p>
+            <a class="downloadButon">Je télécharge</a>
+        </div>
     </section>
 
     <footer>
         <p>SPLITCH Tous droits réservés 2021</p>
     </footer>
-
-
-
-
-
-
-
-
-    <!-- <section id="partner">
-        <div id="partner_splitch">
-            <div id="left_partner">
-                <h1 id="title_partner">Trouve ton partner in crime.</h1>
-                <img id="background1" src="img/background1.png">
-                <img id="background2" src="img/background2.png">
-
-            </div>
-            <div id="right_partner">
-                <img id="force" src="img/force.png">
-                <img id="photo_partner" src="img/O_XIvDy0pcs.png">
-                <img id="backgroundphoto" src="img/backgroud3.png">
-                <img id="coeur" src="img/coeur.png">
-                <img id="question3" src="img/question3.png">
-
-            </div>
-        </div>
-    </section> -->
-
-    <script>
-        // window.onscroll = function () {
-        //     scrollRotate();
-        // };
-
-        // function scrollRotate() {
-        //     let image = document.getElementById("telvid");
-        //     image.style.transform = "rotate(" + window.pageYOffset / 135 + "deg)";
-
-        // }
-    </script>
-    <!-- <section id="jours">
-        <div id="devoile">
-
-            <div id="text_jour">
-                <img id=backgroundjours" src="img/Logojour.png">
-                <h1 id="h1jours">7 jours pour dévoiler ton profil !</h1>
-                <p id="pjours">Notre application vous permet de rencontrer des gens près de vous facilement, et de bâtir
-                    de véritables relations. Découvrez Splitch sur l’App Store dès maintenant !</p>
-                <a id="ajours">Je Télécharge</a>
-            </div>
-        </div>
-
-    </section> -->
-
-    <!-- 
-    <section id="cherche">
-        <h1> <img class="iconquest" src="img/icon_question.png"> Que cherches-tu ? </h1>
-        <div class="lineTags">
-            <p>Là pour le fun</p>
-            <p>Envie de frisson</p>
-            <p>Débat</p>
-            <p>Cherche du sérieux</p>
-            <p>Sex first</p>
-        </div>
-        <div class="lineTags">
-            <p>One shot</p>
-            <p>Le grand amour</p>
-            <p>Sexfriend</p>
-            <p>Constituer une équipe</p>
-            <p>BFF</p>
-            <p>Le coup de coeur</p>
-        </div>
-
-    </section> -->
-
 </body>
 
 </html>
