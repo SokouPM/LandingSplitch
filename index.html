@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="csslanding.css" rel="stylesheet">
+    <link href="/styleAndAnims/style.css" rel="stylesheet">
+    <link href="/styleAndAnims/anim.css" rel="stylesheet">
 
     <title>Splitch</title>
 </head>
@@ -14,57 +15,61 @@
 
     <header id="topbar">
         <h1> Splitch</h1>
-        <img id="toplogo" src='img/logo.png'>
+        <img id="toplogo" src='/img/logo.png'>
         <h3>Télécharger l'App</h3>
     </header>
 
     <section id="meet">
-        <div id="phoneVideo" class="phoneOnScreen">
-            <video src="img/videosplitch.mp4" loop autoplay width="247" height="525"></video>
-            <img id="phoneBorder" src="img/telephone2.png">
+        <div id="phoneVideo" class="phone1OnScreen">
+            <video src="/img/videosplitch.mp4" loop autoplay width="247" height="525"></video>
+            <img id="phoneBorder" src="/img/telephone2.png">
         </div>
         <div id="texte">
-            <img id="splitchLogo" src=img/splitch.png>
+            <img id="splitchLogo" src=/img/splitch.png>
             <h1>Fais des rencontres<br> autrement,</h1>
             <p>Le premier réseau social qui te propose de rencontrer<br> des gens qui partagent les mêmes centres
                 d’intérêts<br> que toi.</p>
             <div class="borderButton">
-                <a class="downloadButon">Je télécharge</a>
+                <a id="meetButton" class="downloadButon">Je télécharge</a>
             </div>
+            <form id="meetForm" class="none" action="mail.php" method="POST">
+                <input type="text" id="name" name="name" placeholder="Ton mail" required>
+                <input type="submit" value="Envoyer">
+            </form>
         </div>
     </section>
 
     <section id="share">
         <h1>Partage tes passions,<br> découvre, vibre, ressent</h1>
         <div id="shareSlider">
-            <img src="img/slideImg1.png" alt="">
-            <img src="img/slideImg2.png" alt="">
-            <img src="img/slideImg3.png" alt="">
-            <img src="img/slideImg1.png" alt="">
-            <img src="img/slideImg2.png" alt="">
-            <img src="img/slideImg3.png" alt="">
+            <img src="/img/slideImg1.png" alt="">
+            <img src="/img/slideImg2.png" alt="">
+            <img src="/img/slideImg3.png" alt="">
+            <!-- <img src="/img/slideImg1.png" alt="">
+            <img src="/img/slideImg2.png" alt="">
+            <img src="/img/slideImg3.png" alt=""> -->
         </div>
-        <img id="sliderPlus" src="img/sliderPlus.png" alt="+">
+        <img id="sliderPlus" src="/img/sliderPlus.png" alt="+">
     </section>
 
     <section id="connect">
         <h1>Connecte-toi avec des gens<br> qui te ressemblent.</h1>
         <div id="messagesIconAndVideo">
             <div id="messages">
-                <div><img src="img/question5.png" alt=""></div>
-                <div><img src="img/question6.png" alt=""></div>
-                <div><img src="img/question7.png" alt=""></div>
+                <div class="messOnScreen"><img src="/img/question5.png" alt=""></div>
+                <div class="messOnScreen"><img src="/img/question6.png" alt=""></div>
+                <div class="messOnScreen"><img src="/img/question7.png" alt=""></div>
             </div>
-            <div id="icon"><img src="img/SplitchIcon.png" alt=""></div>
-            <div id="phoneVideo2">
-                <video src="img/videosplitch.mp4" loop autoplay width="247" height="525"></video>
-                <img id="phoneBorder2" src="img/telephone2.png">
+            <div id="icon" class="iconOnScreen"><img src="/img/SplitchIcon.png" alt=""></div>
+            <div id="phoneVideo2"  class="phone2OnScreen">
+                <video src="/img/videosplitch.mp4" loop autoplay width="247" height="525"></video>
+                <img id="phoneBorder2" src="/img/telephone2.png">
             </div>
         </div>
     </section>
 
     <section id="passions">
-        <h1 class="tagH1"> <img class="iconquest" src="img/icon_question.png"> Choisis tes passions</h1>
+        <h1 class="tagH1"> <img class="iconquest" src="/img/icon_question.png"> Choisis tes passions</h1>
         <div class="lineTags">
             <p>Mélomane</p>
             <p>Big dreamer</p>
@@ -74,19 +79,19 @@
             <p>LGBTQ+</p>
         </div>
         <div class="lineTags">
-            <p>Party</p>
             <p>Street food</p>
+            <p>Sorties</p>
             <p>Gamer</p>
             <p>Fan de chien</p>
             <p>Passion pizza</p>
             <p>Sport extrêmes</p>
+            <p>Engagée</p>
         </div>
         <div class="lineTags">
             <p>Concert</p>
-            <p>Anti chat</p>
+            <p>Dance</p>
             <p>Netflix</p>
             <p>Astrologie</p>
-            <p>Engagé(e)</p>
         </div>
     </section>
 
@@ -96,17 +101,17 @@
             <p>Plutôt d’humeur à discuter, faire une sortie ou lancer un jeu ?<br> À toi de choisir !</p>
         </div>
         <div id="exchImageAndIcons">
-            <img src="img/exchImg.png" alt="">
+            <img src="/img/exchImg.png" alt="">
             <div id="exchIcons">
-                <img src="img/exchIcon1.png" alt="">
-                <img src="img/exchIcon3.png" alt="">
-                <img src="img/exchIcon2.png" alt="">
+                <img src="/img/exchIcon1.png" alt="">
+                <img src="/img/exchIcon3.png" alt="">
+                <img src="/img/exchIcon2.png" alt="">
             </div>
         </div>
     </section>
 
     <section id="WhatTalk">
-        <h1 class="tagH1"> <img class="iconquest" src="img/icon_question.png"> De quoi a tu envie de parler ?</h1>
+        <h1 class="tagH1"> <img class="iconquest" src="/img/icon_question.png"> De quoi a tu envie de parler ?</h1>
         <div class="lineTags">
             <p>Sexe</p>
             <p>Politique</p>
@@ -115,7 +120,7 @@
             <p>Astrologie</p>
         </div>
         <div class="lineTags">
-            <p>People potin</p>
+            <p>People potins</p>
             <p>Histoires drôles</p>
             <p>Mes passions</p>
             <p>La connerie des gens</p>
@@ -133,9 +138,9 @@
 
     <section id="find">
         <div id="findImg">
-            <img src="img/findImg2.png" alt="">
-            <img src="img/findImg1.png" alt="">
-            <img src="img/findImg3.png" alt="">
+            <img src="/img/findImg2.png" alt="">
+            <img src="/img/findImg1.png" alt="">
+            <img src="/img/findImg3.png" alt="">
         </div>
         <div id="findText">
             <h1>Trouves ton partner<br> in crime</h1>
@@ -145,7 +150,7 @@
     </section>
 
     <section id="WhatTag">
-        <h1 class="tagH1"> <img class="iconquest" src="img/icon_question.png"> Plutot quel tag pour toi ?</h1>
+        <h1 class="tagH1"> <img class="iconquest" src="/img/icon_question.png"> Plutot quel tag pour toi ?</h1>
         <div class="lineTags">
             <p>Good vibes</p>
             <p>Une crème</p>
@@ -155,7 +160,7 @@
         </div>
         <div class="lineTags">
             <p>Extravagant(e)</p>
-            <p>Second degrès</p>
+            <p>Second degré</p>
             <p>Bon délire</p>
             <p>Filouterie first</p>
             <p>Casse-couille</p>
@@ -169,16 +174,22 @@
             <p id="pstat">Parce que nous concevons une safe place avec des gens ultra<br> cool, tu rencontreras des gens
                 authentiques avec qui tu pourras<br> partager tous tes centres d’intérêts.</p>
         </div>
-        <img src="img/imgstat.png" alt="">
+        <img src="/img/imgstat.png" alt="">
     </section>
 
     <section id="test">
-        <img src="img/SplitchIconSquare.png" alt="">
+        <img src="/img/SplitchIconSquare.png" alt="">
         <div id="testText">
-            <img src="img/splitchColor.png" alt="">
+            <img src="/img/splitchColor.png" alt="">
             <p>Soit le premier à tester l’app et reçoit un badge exclusif “Précurseur”<br> dès le lancement ! Le badge
                 sera valable à vie.</p>
-            <a class="downloadButon">Je télécharge</a>
+            <div class="borderButton">
+                <a id="testButton" class="downloadButon">Je télécharge</a>
+            </div>
+            <form id="testForm" class="none" action="mail.php" method="POST">
+                <input type="text" id="name" name="name" placeholder="Ton mail" required>
+                <input type="submit" value="Envoyer">
+            </form>
         </div>
     </section>
 
@@ -189,7 +200,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -15,7 +15,7 @@
 
 header, footer {
     height: 66px;
-    background-image: url(img/topbar.png);
+    background-image: url(/img/topbar.png);
     background-size: cover;
     color: white;
 }
@@ -23,6 +23,10 @@ header, footer {
 * {
     margin: 0;
     padding: 0;
+}
+
+input {
+    font-family: 'Gilroy', sans-serif;
 }
 
 p:not(.lineTags p, footer p) {
@@ -53,32 +57,62 @@ h3 {
     color: white;
 }
 
-.downloadButon {
+.downloadButon, input[type="submit"] {
     background: linear-gradient(to left, #ce16d7, #8d6bff, #2992ff, #0bbef0);
-    -webkit-background-clip: text, border-box;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'ProximaSoft', sans-serif;
     font-weight: 800;
     font-size: 20px;
-    padding: 15px 35px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+    border: none;
 }
 
-.downloadButon:hover {
+.downloadButon {
+    padding: 15px 35px;
+}
+
+input[type="submit"] {
+    padding: 0 35px;
+}
+
+.downloadButon:hover, input[type="submit"]:hover {
     background: linear-gradient(to left, #ce16d7, #8d6bff, #2992ff, #0bbef0);
     -webkit-background-clip: initial;
     -webkit-text-fill-color: white;
     cursor: pointer;
 }
 
+input:focus {
+    outline: none;
+}
+
+form input {
+    border: 1px solid pink;
+    -webkit-transition: min-height 0.8s;
+	-moz-transition: min-height 0.8s;
+	transition: min-height 0.8s;
+    min-height: 0px;
+    overflow: auto;
+}
+
+form input[type="text"] {
+    width: 290px;
+    margin-right: 10px;
+    font-size: 15px;
+    padding: 0 15px;
+    border-radius: 20px;
+}
+
 /**************** header ****************/
 
 header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 60px;
+    padding: 0 75px;
 }
 
 /********** Meet Section **********/
@@ -86,7 +120,7 @@ header {
 #meet {
     display: flex;
     justify-content: space-evenly;
-    background: url(img/sourire.png) no-repeat bottom 30px left 60px, url(img/doigts.png) no-repeat top 200px right 80px, url(img/coeurs.png) no-repeat right bottom 130px, url(img/question4.png) no-repeat right 150px bottom;
+    background: url(/img/sourire.png) no-repeat bottom 30px left 60px, url(/img/doigts.png) no-repeat top 200px right 80px, url(/img/coeurs.png) no-repeat right bottom 130px, url(/img/question4.png) no-repeat right 150px bottom;
     padding-bottom: 100px;
 }
 
@@ -110,30 +144,6 @@ header {
     z-index: 2;
 }
 
-.phoneOnScreen {
-    animation-name: phoneRotateOnScreen;
-    animation-duration: 1s;
-    transform: rotate(0deg);
-}
-
-@keyframes phoneRotateOnScreen {
-    from {
-        transform: rotate(-90deg);
-    }
-    to {
-        transform: rotate(0deg)
-    }
-}
-
-@keyframes phoneRotateNotOnScreen {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(-90deg)
-    }
-}
-
 #texte #splitchLogo {
     width: 800px;
     margin-bottom: 20px;
@@ -151,6 +161,12 @@ header {
     margin-left: 200px;
 }
 
+#texte form {
+    margin-left: 140px;
+    display: flex;
+    align-items: center;
+}
+
 /********** Share Section **********/
 
 #share {
@@ -158,7 +174,7 @@ header {
     margin-bottom: 50px;
     padding-left: 2%;
     position: relative;
-    background: url(img/background5.png) no-repeat right top, url(img/background4.png) no-repeat right bottom;
+    background: url(/img/background5.png) no-repeat right top, url(/img/background4.png) no-repeat right bottom;
 }
 
 #share h1 {
@@ -193,7 +209,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: url(img/background1.png) no-repeat top -20px left 28%, url(img/background2.png) no-repeat top 200px left;
+    background: url(/img/background1.png) no-repeat top -20px left 28%, url(/img/background2.png) no-repeat top 200px left;
 }
 
 #messages {
@@ -223,7 +239,6 @@ header {
     position: relative;
     width: 350px;
     height: 570px;
-    transform: rotate(11deg);
     top: 50px;
     right: 10%;
     /* border: solid 1px red; */
@@ -248,6 +263,10 @@ header {
     margin-bottom: 100px;
 }
 
+#passions, #WhatTalk, #WhatTag {
+    cursor: url(/img/cursorTags.png), auto;
+}
+
 #tags h1, #passions h1, #WhatTalk h1, #WhatTag h1 {
     margin-bottom: 25px;
     margin-top: 25px;
@@ -258,6 +277,8 @@ header {
 
 #tags p, #passions p, #WhatTalk p, #WhatTag p {
     font-family: "Gilroy_Bold", sans-serif;
+    text-align: center;
+    cursor: url(/img/cursorTags.png), auto;
 }
 
 .lineTags {
@@ -387,7 +408,7 @@ header {
 }
 
 #testText p {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 /********** Footer **********/
