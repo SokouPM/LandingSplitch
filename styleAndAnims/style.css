@@ -91,8 +91,8 @@ input:focus {
 form input {
     border: 1px solid pink;
     -webkit-transition: min-height 0.8s;
-	-moz-transition: min-height 0.8s;
-	transition: min-height 0.8s;
+    -moz-transition: min-height 0.8s;
+    transition: min-height 0.8s;
     min-height: 0px;
     overflow: auto;
 }
@@ -273,6 +273,16 @@ header {
     font-size: 44px;
     margin-left: 6%;
     color: #363A65;
+}
+
+.tagH1 {
+    display: flex;
+    align-items: center;
+}
+
+.tagH1 img {
+    margin-top: 10px;
+    margin-right: 4px;
 }
 
 #tags p, #passions p, #WhatTalk p, #WhatTag p {
