@@ -3,13 +3,14 @@
 }
 
 /************** Phone1 animations **************/
+
 .phone1OnScreen {
     animation: phone1RotateOnScreen 1s;
     transform: rotate(0deg);
 }
 
 .phone1NotOnScreen {
-    animation: phone1RotateOnScreen 1s reverse;
+    animation: phone1RotateNotOnScreen 1s;
     transform: rotate(-90deg);
 }
 
@@ -22,14 +23,24 @@
     }
 }
 
+@keyframes phone1RotateNotOnScreen {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-90deg)
+    }
+}
+
 /************** Phone2 animations **************/
+
 .phone2OnScreen {
     animation: phone2RotateOnScreen 1s;
     transform: rotate(0deg);
 }
 
 .phone2NotOnScreen {
-    animation: phone2RotateOnScreen 1s reverse;
+    animation: phone2RotateNotOnScreen 1s;
     transform: rotate(90deg);
 }
 
@@ -39,6 +50,15 @@
     }
     to {
         transform: rotate(0deg)
+    }
+}
+
+@keyframes phone2RotateNotOnScreen {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg)
     }
 }
 
@@ -66,17 +86,35 @@
 /*********** Messages animations ************/
 
 .messOnScreen {
-    animation: messEnter 500ms ease-in 0s 1 normal none;
+    animation: messEnter 500ms;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.messNotOnScreen {
+    animation: messLeave 500ms;
+    opacity: 0;
+    transform: translateX(-250px);
 }
 
 @keyframes messEnter {
     0% {
-      opacity: 0;
-      transform: translateX(-250px);
+        opacity: 0;
+        transform: translateX(-250px);
     }
-  
     100% {
-      opacity: 1;
-      transform: translateX(0);
+        opacity: 1;
+        transform: translateX(0);
     }
-  }
+}
+
+@keyframes messLeave {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-250px);
+    }
+}
