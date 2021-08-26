@@ -120,7 +120,6 @@ header {
 #meet {
     display: flex;
     justify-content: space-evenly;
-    background: url(/img/sourire.png) no-repeat bottom 30px left 60px, url(/img/doigts.png) no-repeat top 200px right 80px, url(/img/coeurs.png) no-repeat right bottom 130px, url(/img/question4.png) no-repeat right 150px bottom;
     padding-bottom: 100px;
 }
 
@@ -164,6 +163,29 @@ header {
     margin-left: 140px;
     display: flex;
     align-items: center;
+}
+
+.imgpara{
+    position:absolute;
+    top:0;
+    right:0;
+    overflow:hidden;
+}
+
+.imgparaleft{
+    position: absolute;
+    top:90%;
+    left:2%;
+    overflow: hidden;
+}
+
+#coeurs{
+    top:65%;
+}
+
+#doigts{
+    top:45%;
+    right:5%;
 }
 
 /********** Share Section **********/
@@ -383,6 +405,30 @@ header {
     z-index: 1;
 }
 
+#find1, #find2, #find3 {
+    transform: scale(1.4);
+    opacity: 0;
+}
+
+#find3 {
+    transition: all 1s ease;
+}
+
+#find2 {
+    transition: all 1s;
+    transition-delay: 1s;
+}
+
+#find1 {
+    transition: all 1s;
+    transition-delay: 2s;
+}
+
+#find1.active, #find2.active2, #find3.active3 {
+    transform: scale(1);
+    opacity: 1;
+}
+
 /********** Stat section **********/
 
 #stat {
@@ -394,6 +440,15 @@ header {
 
 #statText h1 {
     font-size: 58px;
+}
+
+#imgstat{
+    transform: translateX(150%);
+    transition: all 1s cubic-bezier(.61,1.43,.65,-1.03)
+}
+
+#imgstat.activeimg{
+    transform: translateX(0%);
 }
 
 /********** Test section **********/
@@ -418,6 +473,15 @@ header {
 
 #testText p {
     margin-bottom: 40px;
+}
+
+#squaresplitch.squareactive{
+    transform:scale(1);
+}
+
+#squaresplitch{
+    transform: scale(0.2);
+    transition: all 1s ease;
 }
 
 /********** Footer **********/

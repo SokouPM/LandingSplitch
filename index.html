@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="csslanding.css" rel="stylesheet">
+    <link href="csstest.css" rel="stylesheet">
 
     <link href="/styleAndAnims/style.css" rel="stylesheet">
     <link href="/styleAndAnims/anim.css" rel="stylesheet">
@@ -21,6 +23,8 @@
     </header>
 
     <section id="meet">
+        <img class="imgparaleft" id="sourire" src="img/sourire.png">
+
         <div id="phoneVideo" class="phone1OnScreen">
             <video src="/img/videosplitch.mp4" loop autoplay width="247" height="525"></video>
             <img id="phoneBorder" src="/img/telephone2.png">
@@ -37,6 +41,10 @@
                 <input type="text" id="name" name="name" placeholder="Ton mail" required>
                 <input type="submit" value="Envoyer">
             </form>
+            <img class="imgpara" id="question4" src="img/question4.png">
+            <img class="imgpara" id="doigts" src="img/doigts.png">
+            <img class="imgpara" id="coeurs" src="img/coeurs.png">
+
         </div>
     </section>
 
@@ -139,9 +147,9 @@
 
     <section id="find">
         <div id="findImg">
-            <img src="/img/findImg2.png" alt="">
-            <img src="/img/findImg1.png" alt="">
-            <img src="/img/findImg3.png" alt="">
+            <img id="find1" src="/img/findImg2.png" alt="">
+            <img id="find2" src="/img/findImg1.png" alt="">
+            <img id="find3" src="/img/findImg3.png" alt="">
         </div>
         <div id="findText">
             <h1>Trouves ton partner<br> in crime</h1>
@@ -169,17 +177,17 @@
         </div>
     </section>
 
-    <section id="stat">
+    <section id="stat" style="position: relative;overflow: hidden;">
         <div id="statText">
             <h1>98% des rencontres<br> chez nous ne finiront<br> jamais.</h1>
             <p id="pstat">Parce que nous concevons une safe place avec des gens ultra<br> cool, tu rencontreras des gens
                 authentiques avec qui tu pourras<br> partager tous tes centres d’intérêts.</p>
         </div>
-        <img src="/img/imgstat.png" alt="">
+        <img id="imgstat" src="/img/imgstat.png" alt="">
     </section>
 
     <section id="test">
-        <img src="/img/SplitchIconSquare.png" alt="">
+        <img id="squaresplitch" src="/img/SplitchIconSquare.png" alt="">
         <div id="testText">
             <img src="/img/splitchColor.png" alt="">
             <p>Soit le premier à tester l’app et reçoit un badge exclusif “Précurseur”<br> dès le lancement ! Le badge
