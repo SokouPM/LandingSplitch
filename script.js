@@ -66,32 +66,86 @@ $(document).scroll(function () {
 
 //////////// Connect messages anim ////////////
 $(document).scroll(function () {
-
-    let screenPositionTop = $(document).scrollTop();
-    let screenPositionBottom = $(document).scrollTop() + $(window).innerHeight();
-
-
-    //let reveal = $('#messages').position().top;
-
-    console.log('ScrollTop : ' + screenPositionTop);
-    console.log('ScrollBottom : ' + screenPositionBottom);
-
-    // const screenHeight = $(window).innerHeight();
-    // let reveal = $('#messages')[0].getBoundingClientRect().top;
-    // let messTab = $('#messages>*');
-
-    // if (reveal < screenHeight + (screenHeight / 10)) {
-    //     messTab.each(function (i) {
-    //         setTimeout(function () {
-    //             console.log("ok")
-    //             $(this).addClass("messOnScreen");
-    //             $(this).removeClass("messNotOnScreen");
-    //         }, 500);
-    //     });
-    // } else {
-
-    // }
 })
+
+window.addEventListener('scroll', reveal);
+window.addEventListener('scroll', parralax);
+window.addEventListener('scroll', revealimg);
+window.addEventListener('scroll', revealsquare);
+
+
+
+//////////// Find img anim ////////////
+function reveal() {
+    const revealfind = document.getElementById('find1');
+    const revealfind2 = document.getElementById('find2');
+    const revealfind3 = document.getElementById('find3');
+
+    const windowheight = window.innerHeight;
+    const revealfromtop = revealfind.getBoundingClientRect().top;
+    const revealpoint = 150;
+
+    if (revealfromtop < windowheight - revealpoint) {
+        revealfind.classList.add('active');
+        revealfind2.classList.add('active2');
+        revealfind3.classList.add('active3');
+        imgstatfind.classList.add('activeimg');
+    } else {
+
+    }
+}
+
+//////////// Stat img anim ////////////
+function revealimg() {
+    const imgstatfind = document.getElementById('imgstat');
+
+    const windowheight = window.innerHeight;
+    const revealfromtopimg = imgstatfind.getBoundingClientRect().top;
+    const revealpoint = 150;
+
+    if (revealfromtopimg < windowheight - revealpoint) {
+        imgstatfind.classList.add('activeimg');
+    }
+
+}
+
+//////////// Test icon anim ////////////
+function revealsquare() {
+    const squarefind = document.getElementById('squaresplitch');
+
+    const windowheight = window.innerHeight;
+    const revealfromtopimg = squarefind.getBoundingClientRect().top;
+    const revealpoint = 150;
+
+    if (revealfromtopimg < windowheight - revealpoint) {
+        squarefind.classList.add('squareactive');
+    }
+
+}
+
+//////////// Meet paralax img anim ////////////
+function parralax() {
+
+    let coeurs = document.getElementById('coeurs');
+    let question4 = document.getElementById('question4');
+    let doigts = document.getElementById('doigts');
+    let sourire = document.getElementById('sourire');
+
+    let value = window.scrollY;
+    sourire.style.top = 75 + value * -0.1 + '%';
+    sourire.style.left = 2 + value * -0.02 + '%';
+
+    coeurs.style.top = 40 + value * -0.1 + '%';
+    coeurs.style.right = value * -0.02 + '%';
+
+    question4.style.top = 75 + value * -0.08 + '%';
+    question4.style.right = 5 + value * -0.1 + '%';
+
+    doigts.style.top = 30 + value * -0.1 + '%';
+    doigts.style.right = 10 + value * -0.02 + '%';
+
+}
+
 // console.log($(window).innerHeight());
 // console.log($('#phoneVideo').position().bottom);
 // console.log($('#phoneVideo').height());
