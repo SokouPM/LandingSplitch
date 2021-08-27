@@ -25,9 +25,9 @@ $('.lineTags').delegate('p', 'click', function () {
 /************ Meet paralax img anim ************/
 $(document).ready(function () {
     setTimeout(function () {
-        $( '.imgpara' ).removeClass( "imgParaNotVisible" ).addClass( "imgParaEnter" );
-        $( '.imgparaleft' ).removeClass( "imgParaNotVisible" ).addClass( "imgParaEnterleft" );
-    }, 1000);
+        $('.imgpara').removeClass("imgParaNotVisible").addClass("imgParaEnter");
+        $('.imgparaleft').removeClass("imgParaNotVisible").addClass("imgParaEnterleft");
+    }, 500);
 });
 
 window.addEventListener('scroll', parralax);
@@ -57,22 +57,36 @@ function parralax() {
 $(document).scroll(function () {
 
     const screenHeight = $(window).innerHeight();
-    let reveal = $('#phoneVideo')[0].getBoundingClientRect().bottom;
+    let revealFromTop = $('#phoneVideo')[0].getBoundingClientRect().top;
+    let revealFromBottom = $('#phoneVideo')[0].getBoundingClientRect().bottom;
 
-    if (reveal < screenHeight / 4 || reveal > screenHeight * 1.5) {
-        $('#phoneVideo').removeClass('phone1OnScreen');
-        $('#phoneVideo').addClass('phone1NotOnScreen');
-        setTimeout(function () {
-            $('#phoneVideo>video').trigger('pause');
-        }, 1000);
-    } else {
+    if (revealFromTop < screenHeight - 150 && revealFromBottom > 150) {
         $('#phoneVideo').removeClass('phone1NotOnScreen');
         $('#phoneVideo').addClass('phone1OnScreen');
         setTimeout(function () {
             $('#phoneVideo>video').trigger('play');
         }, 1000);
+    } else {
+        $('#phoneVideo').removeClass('phone1OnScreen');
+        $('#phoneVideo').addClass('phone1NotOnScreen');
+        setTimeout(function () {
+            $('#phoneVideo>video').trigger('pause');
+        }, 1000);
     }
 });
+
+/************ Slide anim ************/
+
+$(document).scroll(function () {
+
+
+});
+
+
+
+
+
+
 
 /************ Connect messages anim  ************/
 window.addEventListener('scroll', receiveMessage);
@@ -121,19 +135,22 @@ function revealCircleIcon() {
 $(document).scroll(function () {
 
     const screenHeight = $(window).innerHeight();
-    let reveal = $('#phoneVideo2')[0].getBoundingClientRect().bottom;
+    let revealFromTop = $('#phoneVideo2')[0].getBoundingClientRect().top;
+    let revealFromBottom = $('#phoneVideo2')[0].getBoundingClientRect().bottom;
 
-    if (reveal < screenHeight / 4 || reveal > screenHeight * 1.5) {
-        $('#phoneVideo2').removeClass('phone2OnScreen');
-        $('#phoneVideo2').addClass('phone2NotOnScreen');
-        setTimeout(function () {
-            $('#phoneVideo2>video').trigger('pause');
-        }, 1000);
-    } else {
+    console.log(screenHeight);
+
+    if (revealFromTop < screenHeight - 150 && revealFromBottom > 150) {
         $('#phoneVideo2').removeClass('phone2NotOnScreen');
         $('#phoneVideo2').addClass('phone2OnScreen');
         setTimeout(function () {
             $('#phoneVideo2>video').trigger('play');
+        }, 1000);
+    } else {
+        $('#phoneVideo2').removeClass('phone2OnScreen');
+        $('#phoneVideo2').addClass('phone2NotOnScreen');
+        setTimeout(function () {
+            $('#phoneVideo2>video').trigger('pause');
         }, 1000);
     }
 });

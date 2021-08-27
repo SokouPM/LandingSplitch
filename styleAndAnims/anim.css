@@ -103,6 +103,7 @@
 .formApper {
     animation: formAppear 500ms;
     transform: scaleY(1);
+    transform-origin: top;
 }
 
 @keyframes formAppear {
