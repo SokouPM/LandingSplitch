@@ -22,6 +22,37 @@ $('.lineTags').delegate('p', 'click', function () {
     $(this).toggleClass('selectedTag');
 });
 
+/************ Meet paralax img anim ************/
+$(document).ready(function () {
+    setTimeout(function () {
+        $( '.imgpara' ).removeClass( "imgParaNotVisible" ).addClass( "imgParaEnter" );
+        $( '.imgparaleft' ).removeClass( "imgParaNotVisible" ).addClass( "imgParaEnterleft" );
+    }, 1000);
+});
+
+window.addEventListener('scroll', parralax);
+function parralax() {
+
+    let coeurs = document.getElementById('coeurs');
+    let question4 = document.getElementById('question4');
+    let doigts = document.getElementById('doigts');
+    let sourire = document.getElementById('sourire');
+
+    let actualScrollPos = window.scrollY;
+    sourire.style.top = 75 + actualScrollPos * -0.1 + '%';
+    sourire.style.left = 2 + actualScrollPos * -0.02 + '%';
+
+    coeurs.style.top = 40 + actualScrollPos * -0.1 + '%';
+    coeurs.style.right = actualScrollPos * -0.02 + '%';
+
+    question4.style.top = 75 + actualScrollPos * -0.08 + '%';
+    question4.style.right = 5 + actualScrollPos * -0.1 + '%';
+
+    doigts.style.top = 30 + actualScrollPos * -0.1 + '%';
+    doigts.style.right = 10 + actualScrollPos * -0.02 + '%';
+
+}
+
 /************ Phone1 toggle anim + play ************/
 $(document).scroll(function () {
 
@@ -155,30 +186,6 @@ function revealsquare() {
     if (revealfromtopimg < windowheight - revealpoint) {
         squarefind.classList.add('squareactive');
     }
-
-}
-
-/************ Meet paralax img anim ************/
-window.addEventListener('scroll', parralax);
-function parralax() {
-
-    let coeurs = document.getElementById('coeurs');
-    let question4 = document.getElementById('question4');
-    let doigts = document.getElementById('doigts');
-    let sourire = document.getElementById('sourire');
-
-    let actualScrollPos = window.scrollY;
-    sourire.style.top = 75 + actualScrollPos * -0.1 + '%';
-    sourire.style.left = 2 + actualScrollPos * -0.02 + '%';
-
-    coeurs.style.top = 40 + actualScrollPos * -0.1 + '%';
-    coeurs.style.right = actualScrollPos * -0.02 + '%';
-
-    question4.style.top = 75 + actualScrollPos * -0.08 + '%';
-    question4.style.right = 5 + actualScrollPos * -0.1 + '%';
-
-    doigts.style.top = 30 + actualScrollPos * -0.1 + '%';
-    doigts.style.right = 10 + actualScrollPos * -0.02 + '%';
 
 }
 

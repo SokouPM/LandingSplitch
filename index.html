@@ -21,7 +21,7 @@
     </header>
 
     <section id="meet">
-        <img class="imgparaleft" id="sourire" src="img/sourire.png">
+        <img class="imgparaleft imgParaNotVisible" id="sourire" src="img/sourire.png">
 
         <div id="phoneVideo" class="phone1OnScreen">
             <video src="/img/videosplitch.mp4" loop autoplay width="247" height="525"></video>
@@ -32,17 +32,21 @@
             <h1>Fais des rencontres<br> autrement,</h1>
             <p>Le premier réseau social qui te propose de rencontrer<br> des gens qui partagent les mêmes centres
                 d’intérêts<br> que toi.</p>
-            <div class="borderButton">
-                <a id="meetButton" class="downloadButon">Je télécharge</a>
+            <div>
+                <div class="borderButton">
+                    <a id="meetButton" class="downloadButon">Je télécharge</a>
+                </div>
             </div>
+
             <form id="meetForm" class="none" action="mail.php" method="POST">
                 <input type="text" id="name" name="name" placeholder="Ton mail" required>
-                <input type="submit" value="Envoyer">
+                <div class="borderButton">
+                    <input type="submit" value="Envoyer">
+                </div>
             </form>
-            <img class="imgpara" id="question4" src="img/question4.png">
-            <img class="imgpara" id="doigts" src="img/doigts.png">
-            <img class="imgpara" id="coeurs" src="img/coeurs.png">
-
+            <img class="imgpara imgParaNotVisible" id="question4" src="img/question4.png">
+            <img class="imgpara imgParaNotVisible" id="doigts" src="img/doigts.png">
+            <img class="imgpara imgParaNotVisible" id="coeurs" src="img/coeurs.png">
         </div>
     </section>
 
@@ -118,7 +122,7 @@
     </section>
 
     <section id="WhatTalk">
-        <h1 class="tagH1"> <img class="iconquest" src="/img/icon_question.png"> De quoi a tu envie de parler ?</h1>
+        <h1 class="tagH1"> <img class="iconquest" src="/img/icon_question.png"> De quoi as-tu envie de parler ?</h1>
         <div class="lineTags">
             <p>Sexe</p>
             <p>Politique</p>
@@ -195,7 +199,9 @@
             </div>
             <form id="testForm" class="none" action="mail.php" method="POST">
                 <input type="text" id="name" name="name" placeholder="Ton mail" required>
-                <input type="submit" value="Envoyer">
+                <div class="borderButton">
+                    <input type="submit" value="Envoyer">
+                </div>
             </form>
         </div>
     </section>

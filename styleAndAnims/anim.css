@@ -4,8 +4,12 @@
 
 /************** Entering img paralax animations **************/
 
-.imgparaleft {
-    animation: imgEnterLeft 500ms;
+.imgParaNotVisible {
+    opacity: 0;
+}
+
+.imgParaEnterleft {
+    animation: imgEnterLeft 1s;
 }
 
 @keyframes imgEnterLeft {
@@ -19,8 +23,8 @@
     }
 }
 
-.imgpara {
-    animation: imgEnter 500ms;
+.imgParaEnter {
+    animation: imgEnter 1s;
 }
 
 @keyframes imgEnter {
@@ -34,16 +38,6 @@
     }
 }
 
-.messOnScreen {
-    animation: messEnter 500ms;
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.messNotOnScreen {
-    opacity: 0;
-    transform: translateX(-250px);
-}
 
 /************** Phone1 animations **************/
 
