@@ -68,22 +68,8 @@
     min-height: 56px;
 }
 
-/*********** Connect Icon animations ************/
 
-.iconOnScreen {
-    animation: showUpIcon 0.5s;
-}
-
-@keyframes showUpIcon {
-    from {
-        transform: scale(0%);
-    }
-    to {
-        transform: scale(100%)
-    }
-}
-
-/*********** Messages animations ************/
+/*********** Connect Messages animations ************/
 
 .messOnScreen {
     animation: messEnter 500ms;
@@ -92,7 +78,6 @@
 }
 
 .messNotOnScreen {
-    animation: messLeave 500ms;
     opacity: 0;
     transform: translateX(-250px);
 }
@@ -108,13 +93,50 @@
     }
 }
 
-@keyframes messLeave {
-    0% {
-        opacity: 1;
-        transform: translateX(0);
+/*********** Connect Icon animations ************/
+
+.iconOnScreen {
+    animation: showUpIcon 0.5s;
+}
+
+
+.iconNotOnScreen {
+    opacity: 0;
+    transform: scale(0);
+}
+
+
+@keyframes showUpIcon {
+    from {
+        transform: scale(0);
     }
-    100% {
-        opacity: 0;
-        transform: translateX(-250px);
+    to {
+        transform: scale(100%)
     }
+}
+
+/*********** Find img animations ************/
+
+#find1, #find2, #find3 {
+    transform: scale(1.4);
+    opacity: 0;
+}
+
+#find3 {
+    transition: all 0.5s ease;
+}
+
+#find2 {
+    transition: all 0.5s;
+    transition-delay: 0.5s;
+}
+
+#find1 {
+    transition: all 0.5s;
+    transition-delay: 1s;
+}
+
+#find1.active, #find2.active2, #find3.active3 {
+    transform: scale(1);
+    opacity: 1;
 }

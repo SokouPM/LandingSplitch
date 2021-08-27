@@ -1,4 +1,4 @@
-//////////// Forms toggle visible ////////////
+/************ Forms toggle visible ************/
 $('#meetButton').click(function (e) {
     e.preventDefault();
     $('#meetForm').toggleClass('none');
@@ -17,12 +17,12 @@ $('#testButton').click(function (e) {
     }, 5);
 });
 
-//////////// Tags toggle style ////////////
+/************ Tags toggle style ************/
 $('.lineTags').delegate('p', 'click', function () {
     $(this).toggleClass('selectedTag');
 });
 
-//////////// Phone1 toggle anim + play ////////////
+/************ Phone1 toggle anim + play ************/
 $(document).scroll(function () {
 
     const screenHeight = $(window).innerHeight();
@@ -43,7 +43,50 @@ $(document).scroll(function () {
     }
 });
 
-//////////// Phone2 toggle anim + play ////////////
+/************ Connect messages anim  ************/
+window.addEventListener('scroll', receiveMessage);
+function receiveMessage() {
+
+    const messages = document.querySelectorAll('#messages div');
+    const messagesParent = document.getElementById('messages');
+
+    const windowheight = window.innerHeight;
+    const revealfromtopimg = messagesParent.getBoundingClientRect().top;
+    const revealpoint = 200;
+
+
+    if (revealfromtopimg < windowheight - revealpoint) {
+        messages[0].classList.add('messOnScreen');
+        messages[0].classList.remove('messNotOnScreen');
+        setTimeout(function () {
+            messages[1].classList.add('messOnScreen');
+            messages[1].classList.remove('messNotOnScreen');
+            setTimeout(function () {
+                messages[2].classList.add('messOnScreen');
+                messages[2].classList.remove('messNotOnScreen');
+            }, 250);
+        }, 250);
+    }
+
+}
+
+/************ Connect icon anim ************/
+window.addEventListener('scroll', revealCircleIcon);
+function revealCircleIcon() {
+
+    const iconfind = document.getElementById('connectIcon');
+
+    const windowheight = window.innerHeight;
+    const revealfromtopimg = iconfind.getBoundingClientRect().top;
+    const revealpoint = 150;
+
+    if (revealfromtopimg < windowheight - revealpoint) {
+        iconfind.classList.add('iconOnScreen');
+        iconfind.classList.remove('iconNotOnScreen');
+    }
+}
+
+/************ Phone2 toggle anim + play ************/
 $(document).scroll(function () {
 
     const screenHeight = $(window).innerHeight();
@@ -64,18 +107,8 @@ $(document).scroll(function () {
     }
 });
 
-//////////// Connect messages anim ////////////
-$(document).scroll(function () {
-})
-
+/************ Find img anim ************/
 window.addEventListener('scroll', reveal);
-window.addEventListener('scroll', parralax);
-window.addEventListener('scroll', revealimg);
-window.addEventListener('scroll', revealsquare);
-
-
-
-//////////// Find img anim ////////////
 function reveal() {
     const revealfind = document.getElementById('find1');
     const revealfind2 = document.getElementById('find2');
@@ -89,13 +122,14 @@ function reveal() {
         revealfind.classList.add('active');
         revealfind2.classList.add('active2');
         revealfind3.classList.add('active3');
-        imgstatfind.classList.add('activeimg');
+        // imgstatfind.classList.add('activeimg'); 
     } else {
 
     }
 }
 
-//////////// Stat img anim ////////////
+/************ Stat img anim ************/
+window.addEventListener('scroll', revealimg);
 function revealimg() {
     const imgstatfind = document.getElementById('imgstat');
 
@@ -109,7 +143,8 @@ function revealimg() {
 
 }
 
-//////////// Test icon anim ////////////
+/************ Test icon anim ************/
+window.addEventListener('scroll', revealsquare);
 function revealsquare() {
     const squarefind = document.getElementById('squaresplitch');
 
@@ -123,7 +158,8 @@ function revealsquare() {
 
 }
 
-//////////// Meet paralax img anim ////////////
+/************ Meet paralax img anim ************/
+window.addEventListener('scroll', parralax);
 function parralax() {
 
     let coeurs = document.getElementById('coeurs');
@@ -131,18 +167,18 @@ function parralax() {
     let doigts = document.getElementById('doigts');
     let sourire = document.getElementById('sourire');
 
-    let value = window.scrollY;
-    sourire.style.top = 75 + value * -0.1 + '%';
-    sourire.style.left = 2 + value * -0.02 + '%';
+    let actualScrollPos = window.scrollY;
+    sourire.style.top = 75 + actualScrollPos * -0.1 + '%';
+    sourire.style.left = 2 + actualScrollPos * -0.02 + '%';
 
-    coeurs.style.top = 40 + value * -0.1 + '%';
-    coeurs.style.right = value * -0.02 + '%';
+    coeurs.style.top = 40 + actualScrollPos * -0.1 + '%';
+    coeurs.style.right = actualScrollPos * -0.02 + '%';
 
-    question4.style.top = 75 + value * -0.08 + '%';
-    question4.style.right = 5 + value * -0.1 + '%';
+    question4.style.top = 75 + actualScrollPos * -0.08 + '%';
+    question4.style.right = 5 + actualScrollPos * -0.1 + '%';
 
-    doigts.style.top = 30 + value * -0.1 + '%';
-    doigts.style.right = 10 + value * -0.02 + '%';
+    doigts.style.top = 30 + actualScrollPos * -0.1 + '%';
+    doigts.style.right = 10 + actualScrollPos * -0.02 + '%';
 
 }
 

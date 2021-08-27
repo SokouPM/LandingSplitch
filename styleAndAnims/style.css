@@ -83,7 +83,7 @@ input:focus {
 }
 
 form input {
-    border: 1px solid gray;
+    border: none;
     -webkit-transition: min-height 0.8s;
     -moz-transition: min-height 0.8s;
     transition: min-height 0.8s;
@@ -92,6 +92,7 @@ form input {
 }
 
 form input[type="text"] {
+    border: 1px solid gray;
     width: 290px;
     margin-right: 10px;
     font-size: 15px;
@@ -136,7 +137,6 @@ header {
     top: 14px;
     background: black;
     border-radius: 25px;
-    z-index: 2;
 }
 
 #texte #splitchLogo {
@@ -207,7 +207,12 @@ header {
 }
 
 #share h1 {
-    margin-left: 50px;
+    margin-left: 8%;
+}
+
+#shareSlider {
+    overflow: hidden;
+    max-height: 376px;
 }
 
 #shareSlider img:not(#sliderPlus) {
@@ -218,8 +223,8 @@ header {
 #sliderPlus {
     position: absolute;
     width: 200px;
-    right: 120px;
-    top: 235px;
+    right: 4%;
+    top: 38%;
 }
 
 /********** Connect Section **********/
@@ -238,12 +243,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: url(/img/background1.png) no-repeat top -20px left 28%, url(/img/background2.png) no-repeat top 200px left;
+    background: url(/img/background1.png) no-repeat top -21px left 31%, url(/img/background2.png) no-repeat top 200px left;
 }
 
 #messages {
     display: flex;
     flex-direction: column;
+    padding-left: 80px;
 }
 
 #messages :nth-child(1) {
@@ -258,7 +264,7 @@ header {
     margin-left: 100px;
 }
 
-#icon {
+#connectIcon {
     border-radius: 100%;
     margin-left: -10%;
     box-shadow: 4px 4px 13px -1px rgba(0, 0, 0, 0.11);
@@ -283,13 +289,13 @@ header {
     top: 14px;
     background: black;
     border-radius: 25px;
-    z-index: 2;
 }
 
 /********** All tags (Passions section, WhatTalk section, WhatTag section **********/
 
 #passions, #WhatTalk, #WhatTag {
     margin-bottom: 100px;
+    overflow: auto;
 }
 
 #passions, #WhatTalk, #WhatTag {
@@ -300,7 +306,7 @@ header {
     margin-bottom: 25px;
     margin-top: 25px;
     font-size: 44px;
-    margin-left: 6%;
+    margin-left: 15%;
     color: #363A65;
 }
 
@@ -361,6 +367,7 @@ header {
     Font-size: 16px;
     color: #363A65;
     Line-height: 40px;
+    margin-bottom: 100px;
 }
 
 #exchImageAndIcons {
@@ -413,30 +420,6 @@ header {
     z-index: 1;
 }
 
-#find1, #find2, #find3 {
-    transform: scale(1.4);
-    opacity: 0;
-}
-
-#find3 {
-    transition: all 1s ease;
-}
-
-#find2 {
-    transition: all 1s;
-    transition-delay: 1s;
-}
-
-#find1 {
-    transition: all 1s;
-    transition-delay: 2s;
-}
-
-#find1.active, #find2.active2, #find3.active3 {
-    transform: scale(1);
-    opacity: 1;
-}
-
 /********** Stat section **********/
 
 #stat {
@@ -466,7 +449,7 @@ header {
 #test {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 100px;
 }
 
@@ -474,6 +457,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 100px;
 }
 
 #testText img {
