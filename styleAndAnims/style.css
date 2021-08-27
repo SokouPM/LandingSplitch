@@ -82,6 +82,12 @@ input:focus {
     outline: none;
 }
 
+form {
+    display: flex;
+    align-items: center;
+}
+
+
 form input {
     border: none;
     -webkit-transition: min-height 0.8s;
@@ -167,14 +173,12 @@ header {
     top: 95%;
     right: 0;
     overflow-x: hidden;
-    z-index: -100;
 }
 
 .imgparaleft {
     position: absolute;
     top: 90%;
     left: 2%;
-    z-index: -100;
 }
 
 #sourire {

@@ -2,6 +2,49 @@
     display: none !important;
 }
 
+/************** Entering img paralax animations **************/
+
+.imgparaleft {
+    animation: imgEnterLeft 500ms;
+}
+
+@keyframes imgEnterLeft {
+    0% {
+        opacity: 0;
+        transform: translate(-250px, -250px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.imgpara {
+    animation: imgEnter 500ms;
+}
+
+@keyframes imgEnter {
+    0% {
+        opacity: 0;
+        transform: translate(250px, -250px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.messOnScreen {
+    animation: messEnter 500ms;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.messNotOnScreen {
+    opacity: 0;
+    transform: translateX(-250px);
+}
+
 /************** Phone1 animations **************/
 
 .phone1OnScreen {
@@ -68,7 +111,6 @@
     min-height: 56px;
 }
 
-
 /*********** Connect Messages animations ************/
 
 .messOnScreen {
@@ -99,12 +141,10 @@
     animation: showUpIcon 0.5s;
 }
 
-
 .iconNotOnScreen {
     opacity: 0;
     transform: scale(0);
 }
-
 
 @keyframes showUpIcon {
     from {
