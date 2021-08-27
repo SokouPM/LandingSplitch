@@ -114,14 +114,12 @@ input:focus {
 form {
     display: flex;
     align-items: center;
+    transform: scaleY(0);
 }
 
 form input {
     border: none;
-    -webkit-transition: min-height 0.8s;
-    -moz-transition: min-height 0.8s;
-    transition: min-height 0.8s;
-    min-height: 0px;
+    min-height: 56px;
     overflow: auto;
 }
 
@@ -212,6 +210,7 @@ header {
 #sourire {
     top: 75%;
     left: 2%;
+    z-index: 10;
 }
 
 #coeurs {
@@ -244,18 +243,21 @@ header {
 
 #shareSlider {
     overflow: hidden;
+    margin-right: 160px;
     max-height: 376px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 #shareSlider img:not(#sliderPlus) {
     width: 250px;
-    margin-right: 20px;
 }
 
 #sliderPlus {
     position: absolute;
     width: 200px;
-    right: 4%;
+    right: 1%;
     top: 38%;
 }
 

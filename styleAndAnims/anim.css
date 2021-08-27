@@ -38,7 +38,6 @@
     }
 }
 
-
 /************** Phone1 animations **************/
 
 .phone1OnScreen {
@@ -101,8 +100,18 @@
 
 /*************** Forms animations ***************/
 
-.max {
-    min-height: 56px;
+.formApper {
+    animation: formAppear 500ms;
+    transform: scaleY(1);
+}
+
+@keyframes formAppear {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
 }
 
 /*********** Connect Messages animations ************/

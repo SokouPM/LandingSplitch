@@ -4,7 +4,7 @@ $('#meetButton').click(function (e) {
     $('#meetForm').toggleClass('none');
     $(this).parent().toggleClass('none');
     setTimeout(function () {
-        $('#meetForm>*').toggleClass('max');
+        $('#meetForm').toggleClass('formApper');
     }, 5);
 });
 
@@ -13,7 +13,7 @@ $('#testButton').click(function (e) {
     $('#testForm').toggleClass('none');
     $(this).parent().toggleClass('none');
     setTimeout(function () {
-        $('#testForm>*').toggleClass('max');
+        $('#testForm').toggleClass('formApper');
     }, 5);
 });
 
