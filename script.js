@@ -160,29 +160,24 @@ $(document).scroll(function () {
 });
 
 /************ Find img anim ************/
-window.addEventListener('scroll', reveal);
-function reveal() {
-    const revealfind = document.getElementById('findVid');
-    // const revealfind = document.getElementById('find1');
-    // const revealfind2 = document.getElementById('find2');
-    // const revealfind3 = document.getElementById('find3');
+$(document).ready(function () {
+    let videoViewed = false;
+    $(window).scroll(function () {
 
-    const windowheight = window.innerHeight;
-    const revealfromtop = revealfind.getBoundingClientRect().top;
-    const revealpoint = 150;
-
-    if (revealfromtop < windowheight - revealpoint) {
-        $('#findVid>video').trigger('play');
+        const revealfind = $('#findVid');
+        const windowheight = window.innerHeight;
+        const revealfromtop = revealfind[0].getBoundingClientRect().top;
+        const revealpoint = 150;
 
 
-        // revealfind.classList.add('active');
-        // revealfind2.classList.add('active2');
-        // revealfind3.classList.add('active3');
-        // imgstatfind.classList.add('activeimg'); 
-    }// else {
-
-    // }
-}
+        if (revealfromtop < windowheight - revealpoint) {
+            if (videoViewed === false) {
+                $('#findVid>video').trigger('play');
+                videoViewed = true;
+            }
+        }
+    })
+});
 
 /************ Stat img anim ************/
 window.addEventListener('scroll', revealimg);
