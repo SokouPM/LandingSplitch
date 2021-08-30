@@ -38,8 +38,8 @@
                 </div>
             </div>
 
-            <form id="meetForm" class="none" action="mail.php" method="POST">
-                <input type="text" id="name" name="name" placeholder="Ton mail" required>
+            <form id="meetForm" class="none" action="/backend/mail.php" method="POST">
+                <input type="text" id="name" name="name" placeholder="Entre ton mail" required>
                 <div class="borderButton">
                     <input type="submit" value="Envoyer">
                 </div>
@@ -81,28 +81,30 @@
 
     <section id="passions">
         <h1 class="tagH1"> <img class="iconquest" src="/img/icon_question.png"> Choisis tes passions</h1>
-        <div class="lineTags">
-            <p>Mélomane</p>
-            <p>Big dreamer</p>
-            <p>Planet I care</p>
-            <p>Spiritualité</p>
-            <p>Sneakers Addict</p>
-            <p>LGBTQ+</p>
-        </div>
-        <div class="lineTags">
-            <p>Street food</p>
-            <p>Sorties</p>
-            <p>Gamer</p>
-            <p>Fan de chien</p>
-            <p>Passion pizza</p>
-            <p>Sport extrêmes</p>
-            <p>Engagée</p>
-        </div>
-        <div class="lineTags">
-            <p>Concert</p>
-            <p>Dance</p>
-            <p>Netflix</p>
-            <p>Astrologie</p>
+        <div class="tagGroup">
+            <div class="lineTags">
+                <p>Mélomane</p>
+                <p>Big dreamer</p>
+                <p>Planet I care</p>
+                <p>Spiritualité</p>
+                <p>Sneakers Addict</p>
+                <p>LGBTQ+</p>
+            </div>
+            <div class="lineTags">
+                <p>Street food</p>
+                <p>Sorties</p>
+                <p>Gamer</p>
+                <p>Fan de chien</p>
+                <p>Passion pizza</p>
+                <p>Sport extrêmes</p>
+                <p>Engagée</p>
+            </div>
+            <div class="lineTags">
+                <p>Concert</p>
+                <p>Dance</p>
+                <p>Netflix</p>
+                <p>Astrologie</p>
+            </div>
         </div>
     </section>
 
@@ -123,36 +125,43 @@
 
     <section id="WhatTalk">
         <h1 class="tagH1"> <img class="iconquest" src="/img/icon_question.png"> De quoi as-tu envie de parler ?</h1>
-        <div class="lineTags">
-            <p>Sexe</p>
-            <p>Politique</p>
-            <p>Religion</p>
-            <p>Spiritualité</p>
-            <p>Astrologie</p>
-        </div>
-        <div class="lineTags">
-            <p>People potins</p>
-            <p>Histoires drôles</p>
-            <p>Mes passions</p>
-            <p>La connerie des gens</p>
-            <p>Tu préfère ?</p>
-            <p>Best places to go</p>
-        </div>
-        <div class="lineTags">
-            <p>Best memories</p>
-            <p>Bon plans</p>
-            <p>Musique</p>
-            <p>Coming out</p>
-            <p>Tabous</p>
+        <div class="tagGroup">
+            <div class="lineTags">
+                <p>Sexe</p>
+                <p>Politique</p>
+                <p>Religion</p>
+                <p>Spiritualité</p>
+                <p>Astrologie</p>
+            </div>
+            <div class="lineTags">
+                <p>People potins</p>
+                <p>Histoires drôles</p>
+                <p>Mes passions</p>
+                <p>La connerie des gens</p>
+                <p>Tu préfère ?</p>
+                <p>Best places to go</p>
+            </div>
+            <div class="lineTags">
+                <p>Best memories</p>
+                <p>Bon plans</p>
+                <p>Musique</p>
+                <p>Coming out</p>
+                <p>Tabous</p>
+            </div>
         </div>
     </section>
 
     <section id="find">
-        <div id="findImg">
+        <div id="findVid">
+            <video src="/img/v1.mp4" height="500px"></video>
+            <video src="/img/v2.mp4" height="500px"></video>
+        </div>
+
+        <!-- <div id="findImg">
             <img id="find1" src="/img/findImg2.png" alt="">
             <img id="find2" src="/img/findImg1.png" alt="">
             <img id="find3" src="/img/findImg3.png" alt="">
-        </div>
+        </div> -->
         <div id="findText">
             <h1>Trouves ton partner<br> in crime</h1>
             <p>Flash avec des gens avec qui tu as plein de points<br> communs, après à toi de choisir : pote de
@@ -162,20 +171,22 @@
 
     <section id="WhatTag">
         <h1 class="tagH1"> <img class="iconquest" src="/img/icon_question.png"> Plutot quel tag pour toi ?</h1>
-        <div class="lineTags">
-            <p>Good vibes</p>
-            <p>Une crème</p>
-            <p>Timide</p>
-            <p>Fort tempéramment</p>
-            <p>Féministe</p>
-        </div>
-        <div class="lineTags">
-            <p>Extravagant(e)</p>
-            <p>Second degré</p>
-            <p>Bon délire</p>
-            <p>Filouterie first</p>
-            <p>Casse-couille</p>
-            <p>Eternel optimiste</p>
+        <div class="tagGroup">
+            <div class="lineTags">
+                <p>Good vibes</p>
+                <p>Une crème</p>
+                <p>Timide</p>
+                <p>Fort tempéramment</p>
+                <p>Féministe</p>
+            </div>
+            <div class="lineTags">
+                <p>Extravagant(e)</p>
+                <p>Second degré</p>
+                <p>Bon délire</p>
+                <p>Filouterie first</p>
+                <p>Casse-couille</p>
+                <p>Eternel optimiste</p>
+            </div>
         </div>
     </section>
 
@@ -197,8 +208,8 @@
             <div class="borderButton">
                 <a id="testButton" class="downloadButon">Je télécharge</a>
             </div>
-            <form id="testForm" class="none" action="mail.php" method="POST">
-                <input type="text" id="name" name="name" placeholder="Ton mail" required>
+            <form id="testForm" class="none" action="/backend/mail.php" method="POST">
+                <input type="text" id="name" name="name" placeholder="Entre ton mail" required>
                 <div class="borderButton">
                     <input type="submit" value="Envoyer">
                 </div>

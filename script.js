@@ -76,17 +76,23 @@ $(document).scroll(function () {
 });
 
 /************ Slide anim ************/
+// $(document).ready(function () {
+//     let slideNumber = 1;
+//     let lastScrollTop = 0;
 
-$(document).scroll(function () {
+//     $(document).scroll(function () {
+
+//         let scrollPos = $(document).scrollTop();
+//         let revealfromTop = $('#share')[0].getBoundingClientRect().top;
+
+//         if (revealfromTop <= 60 && revealfromTop >= -100) {
+//             window.location.href = "index.html#share";
+
+//         }
 
 
-});
-
-
-
-
-
-
+//     });
+// });
 
 /************ Connect messages anim  ************/
 window.addEventListener('scroll', receiveMessage);
@@ -138,8 +144,6 @@ $(document).scroll(function () {
     let revealFromTop = $('#phoneVideo2')[0].getBoundingClientRect().top;
     let revealFromBottom = $('#phoneVideo2')[0].getBoundingClientRect().bottom;
 
-    console.log(screenHeight);
-
     if (revealFromTop < screenHeight - 150 && revealFromBottom > 150) {
         $('#phoneVideo2').removeClass('phone2NotOnScreen');
         $('#phoneVideo2').addClass('phone2OnScreen');
@@ -158,22 +162,26 @@ $(document).scroll(function () {
 /************ Find img anim ************/
 window.addEventListener('scroll', reveal);
 function reveal() {
-    const revealfind = document.getElementById('find1');
-    const revealfind2 = document.getElementById('find2');
-    const revealfind3 = document.getElementById('find3');
+    const revealfind = document.getElementById('findVid');
+    // const revealfind = document.getElementById('find1');
+    // const revealfind2 = document.getElementById('find2');
+    // const revealfind3 = document.getElementById('find3');
 
     const windowheight = window.innerHeight;
     const revealfromtop = revealfind.getBoundingClientRect().top;
     const revealpoint = 150;
 
     if (revealfromtop < windowheight - revealpoint) {
-        revealfind.classList.add('active');
-        revealfind2.classList.add('active2');
-        revealfind3.classList.add('active3');
-        // imgstatfind.classList.add('activeimg'); 
-    } else {
+        $('#findVid>video').trigger('play');
 
-    }
+
+        // revealfind.classList.add('active');
+        // revealfind2.classList.add('active2');
+        // revealfind3.classList.add('active3');
+        // imgstatfind.classList.add('activeimg'); 
+    }// else {
+
+    // }
 }
 
 /************ Stat img anim ************/

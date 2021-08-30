@@ -147,7 +147,7 @@ header {
 #meet {
     display: flex;
     justify-content: space-evenly;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
     overflow: hidden;
     position: relative;
 }
@@ -236,7 +236,7 @@ header {
 /********** Share Section **********/
 
 #share {
-    padding-bottom: 100px;
+    padding: 100px 0;
     margin-bottom: 50px;
     padding-left: 2%;
     position: relative;
@@ -264,7 +264,7 @@ header {
     position: absolute;
     width: 200px;
     right: 1%;
-    top: 38%;
+    top: 45%;
 }
 
 /********** Connect Section **********/
@@ -347,7 +347,6 @@ header {
 
 #passions, #WhatTalk, #WhatTag {
     margin-bottom: 100px;
-    overflow: auto;
 }
 
 #passions, #WhatTalk, #WhatTag {
@@ -370,6 +369,10 @@ header {
 .tagH1 img {
     margin-top: 10px;
     margin-right: 4px;
+}
+
+.tagGroup {
+    overflow-x: auto;
 }
 
 #tags p, #passions p, #WhatTalk p, #WhatTag p {
