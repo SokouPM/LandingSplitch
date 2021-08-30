@@ -339,22 +339,6 @@ header {
         margin-right: 4%;
     }
     #phoneVideo2 {
-        right: 4%;
-    }
-}
-
-@media screen and (max-width: 1033px) {
-    #messages {
-        padding-left: 0;
-        margin-right: 4%;
-    }
-    /* #messages :nth-child(1) {
-        margin-left: 10px;
-    } */
-    #messages :nth-child(3) {
-        margin-left: 20px;
-    }
-    #phoneVideo2 {
         right: 0;
     }
 }
