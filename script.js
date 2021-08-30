@@ -118,7 +118,6 @@ function receiveMessage() {
             }, 250);
         }, 250);
     }
-
 }
 
 /************ Connect icon anim ************/
@@ -169,7 +168,6 @@ $(document).ready(function () {
         const revealfromtop = revealfind[0].getBoundingClientRect().top;
         const revealpoint = 150;
 
-
         if (revealfromtop < windowheight - revealpoint) {
             if (videoViewed === false) {
                 $('#findVid>video').trigger('play');
@@ -195,19 +193,17 @@ function revealimg() {
 }
 
 /************ Test icon anim ************/
-window.addEventListener('scroll', revealsquare);
-function revealsquare() {
-    const squarefind = document.getElementById('squaresplitch');
+$(window).scroll(function () {
+    const squarefind = $('#squaresplitch');
 
     const windowheight = window.innerHeight;
-    const revealfromtopimg = squarefind.getBoundingClientRect().top;
+    const revealfromtopimg = squarefind[0].getBoundingClientRect().top;
     const revealpoint = 150;
 
     if (revealfromtopimg < windowheight - revealpoint) {
-        squarefind.classList.add('squareactive');
+        squarefind.addClass('squareactive');
     }
-
-}
+});
 
 // console.log($(window).innerHeight());
 // console.log($('#phoneVideo').position().bottom);

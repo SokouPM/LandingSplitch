@@ -39,7 +39,7 @@
             </div>
 
             <form id="meetForm" class="none" action="/backend/mail.php" method="POST">
-                <input type="text" id="name" name="name" placeholder="Entre ton mail" required>
+                <input type="text" id="name" name="name" placeholder="Entre ton mail" pattern="[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}" required>
                 <div class="borderButton">
                     <input type="submit" value="Envoyer">
                 </div>
