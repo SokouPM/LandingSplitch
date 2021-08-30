@@ -39,17 +39,49 @@ function parralax() {
     let sourire = document.getElementById('sourire');
 
     let actualScrollPos = window.scrollY;
-    sourire.style.top = 75 + actualScrollPos * -0.1 + '%';
-    sourire.style.left = 2 + actualScrollPos * -0.02 + '%';
 
-    coeurs.style.top = 40 + actualScrollPos * -0.1 + '%';
-    coeurs.style.right = actualScrollPos * -0.02 + '%';
+    if (window.screen.width > 1220) {
+        sourire.style.top = 75 + actualScrollPos * -0.1 + '%';
+        sourire.style.left = 2 + actualScrollPos * -0.02 + '%';
 
-    question4.style.top = 75 + actualScrollPos * -0.08 + '%';
-    question4.style.right = 5 + actualScrollPos * -0.1 + '%';
+        coeurs.style.top = 40 + actualScrollPos * -0.1 + '%';
+        coeurs.style.right = actualScrollPos * -0.02 + '%';
 
-    doigts.style.top = 30 + actualScrollPos * -0.1 + '%';
-    doigts.style.right = 10 + actualScrollPos * -0.02 + '%';
+        question4.style.top = 75 + actualScrollPos * -0.08 + '%';
+        question4.style.right = 5 + actualScrollPos * -0.1 + '%';
+
+        doigts.style.top = 30 + actualScrollPos * -0.1 + '%';
+        doigts.style.right = 10 + actualScrollPos * -0.02 + '%';
+
+    } else if (window.screen.width <= 1220 && window.screen.width > 965) {
+
+        sourire.style.top = 75 + actualScrollPos * -0.1 + '%';
+        sourire.style.left = 2 + actualScrollPos * -0.02 + '%';
+
+        coeurs.style.top = 45 + actualScrollPos * -0.1 + '%';
+        coeurs.style.right = actualScrollPos * -0.02 + '%';
+
+        question4.style.top = 85 + actualScrollPos * -0.08 + '%';
+        question4.style.right = 5 + actualScrollPos * -0.1 + '%';
+
+        doigts.style.top = 25 + actualScrollPos * -0.1 + '%';
+        doigts.style.right = 5 + actualScrollPos * -0.02 + '%';
+
+    } else {
+
+        sourire.style.top = 50 + actualScrollPos * -0.1 + '%';
+        sourire.style.left = 2 + actualScrollPos * -0.02 + '%';
+
+        coeurs.style.top = 40 + actualScrollPos * -0.1 + '%';
+        coeurs.style.right = actualScrollPos * -0.02 + '%';
+
+        question4.style.top = 85 + actualScrollPos * -0.08 + '%';
+        question4.style.right = 5 + actualScrollPos * -0.1 + '%';
+
+        doigts.style.top = 10 + actualScrollPos * -0.1 + '%';
+        doigts.style.right = 4 + actualScrollPos * -0.02 + '%';
+    }
+
 
 }
 
@@ -60,7 +92,14 @@ $(document).scroll(function () {
     let revealFromTop = $('#phoneVideo')[0].getBoundingClientRect().top;
     let revealFromBottom = $('#phoneVideo')[0].getBoundingClientRect().bottom;
 
-    if (revealFromTop < screenHeight - 150 && revealFromBottom > 150) {
+
+    if (window.screen.width > 965) {
+        var revealpoint = 150;
+    } else {
+        var revealpoint = -200;
+    }
+
+    if (revealFromBottom > revealpoint) {
         $('#phoneVideo').removeClass('phone1NotOnScreen');
         $('#phoneVideo').addClass('phone1OnScreen');
         setTimeout(function () {

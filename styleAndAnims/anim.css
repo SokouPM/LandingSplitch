@@ -42,7 +42,7 @@
 
 .phone1OnScreen {
     animation: phone1RotateOnScreen 1s;
-    transform: rotate(0deg);
+    transform: rotate(-15deg);
 }
 
 .phone1NotOnScreen {
@@ -55,13 +55,13 @@
         transform: rotate(-90deg);
     }
     to {
-        transform: rotate(0deg)
+        transform: rotate(-15deg)
     }
 }
 
 @keyframes phone1RotateNotOnScreen {
     from {
-        transform: rotate(0deg);
+        transform: rotate(-15deg);
     }
     to {
         transform: rotate(-90deg)
@@ -72,7 +72,7 @@
 
 .phone2OnScreen {
     animation: phone2RotateOnScreen 1s;
-    transform: rotate(0deg);
+    transform: rotate(15deg);
 }
 
 .phone2NotOnScreen {
@@ -85,7 +85,7 @@
         transform: rotate(90deg);
     }
     to {
-        transform: rotate(0deg)
+        transform: rotate(15deg)
     }
 }
 
@@ -183,4 +183,15 @@
 #find1.active, #find2.active2, #find3.active3 {
     transform: scale(1);
     opacity: 1;
+}
+
+/*********** Stat img animations ************/
+
+#imgstat {
+    transform: translateX(150%);
+    transition: all 1s cubic-bezier(.61, 1.43, .65, -1.03)
+}
+
+#imgstat.activeimg {
+    transform: translateX(0%);
 }

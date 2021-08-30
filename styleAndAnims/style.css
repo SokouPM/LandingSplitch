@@ -23,6 +23,7 @@ header, footer {
 * {
     margin: 0;
     padding: 0;
+    /* border: red solid 1px; */
 }
 
 input {
@@ -47,6 +48,12 @@ h1:not(header h1):not(.tagH1) {
     -webkit-text-fill-color: transparent;
     font-size: 47px;
     margin-bottom: 30px;
+}
+
+@media screen and (max-width: 965px) {
+    h1:not(header h1):not(.tagH1) {
+        font-size: 30px;
+    }
 }
 
 h1, h3 {
@@ -142,6 +149,13 @@ header {
     padding: 0 75px;
 }
 
+@media screen and (max-width: 965px) {
+    header {
+        margin-bottom: 20px;
+        padding: 0 20px;
+    }
+}
+
 /********** Meet Section **********/
 
 #meet {
@@ -169,6 +183,8 @@ header {
     top: 14px;
     background: black;
     border-radius: 25px;
+    width: 247px;
+    height: 525px;
 }
 
 #texte #splitchLogo {
@@ -227,127 +243,92 @@ header {
     right: 5%;
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1300px) {
+    #meet {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    #meet {
+        padding-bottom: 115px;
+    }
     #texte #splitchLogo {
         width: 600px;
     }
+    #doigts {
+        top: 25%;
+        right: 5%;
+    }
+    #coeurs {
+        top: 45%;
+    }
+    #question4 {
+        top: 85%;
+    }
+}
 
-    #squaresplitch.squareactive{
-        display:block;
-        margin:auto;
+@media screen and (max-width: 1010px) {
+    #phoneVideo {
+        left: 5%;
     }
+}
 
-    #texte h1{
-        margin-top: 575px;
+@media screen and (max-width: 965px) {
+    #meet {
+        padding-bottom: 420px;
+        flex-direction: column;
     }
-    #test, #stat, #exchange, #find{
-        display:initial !important;
+    #phoneVideo {
+        left: 0;
+        top: 50px;
     }
-
-    #testText{
-        margin-left:0px !important;
-        margin-top:40px;
-        margin-bottom:40px;
+    #phoneVideo #phoneBorder {
+        width: 250px;
     }
-
-    #exchImageAndIcons{
-        text-align:center;
+    #phoneVideo video {
+        position: absolute;
+        left: 30px;
+        top: 1px;
+        width: 182px;
+        height: 393px;
     }
-
-    #phoneVideo2{
-        display: none;
+    #texte {
+        width: 100%;
+        padding: auto;
     }
-
-    #coeurs{
-        width: 20%;
-        top:40%;
+    #texte #splitchLogo {
+        position: absolute;
+        z-index: -50;
+        width: 334px;
+        right: 3%;
     }
-
-    .borderButton{
-        position:relative;
-        right: 125px;
+    #texte h1, #texte p, #texte .borderButton:not(form .borderButton), #texte form {
+        position: relative;
+        top: 500px;
+        margin-left: 0;
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
     }
-    
-    #sourire{
-        top:45% !important;
-        width: 20%;
-
-
-    }
-
-    #texte h1,  #texte p{
-        margin-left:-35px !important;
-    }
-    #phoneVideo video{
-        top:75px;
-    }
-
-    #phoneBorder{
-        top:60px;
-    }
-    #question4{
-        width:45%;
-        top:20% !important;
-        right:2% !important;
+    #texte p {
+        font-size: 14px;
     }
     #doigts {
-        width: 20%;
-        top:5%;
-        right: 2%;
+        width: 60px;
+        top: 10%;
+        right: 4%;
     }
-    #connectIcon img{
-        position: relative;
-        right:100%;
+    #coeurs {
+        width: 70px;
+        top: 40%;
     }
-
-    #messages div:nth-child(2) img{
-        position: relative;
-        left:90%;
+    #question4 {
+        display: none;
     }
-
-    #exchIcons img{
-        width:20% !important;
-    }
-    #exchIcons :nth-child(2){
-        width:25% !important;
-    }
-
-    #exchImageAndIcons img{
-        width:70%;
-    }
-    #WhatTalk{
-        margin-bottom:0 !important;
-    }
-
-    .lineTags{
-        justify-content: left !important;
-    }
-
-    #imgstat.activeimg{
-        width:90%;
-        margin:auto;
-        display: block;
-        margin-bottom: 40px !important;
-        margin-top: 40px !important;
-    }
-
-    p:not(.lineTags p, footer p){
-        margin-left:25px !important;
-    }
-
-    #statText h1{
-        font-size:32px !important;
-        margin-left:25px;
-    }
-
-    #find1.active, #find2.active2, #find3.active3 {
-       transform: scale(0.6) !important;
-       margin-left:-55px;
-    }
-
-    #share h1 , #connect h1, #tags h1, #passions h1, #WhatTalk h1, #WhatTag h1, h1:not(header h1):not(.tagH1){
-        font-size:30px !important;
-        margin-left:25px !important;
+    #sourire {
+        top: 50%;
+        width: 70px;
     }
 }
 
@@ -383,6 +364,19 @@ header {
     width: 200px;
     right: 1%;
     top: 45%;
+}
+
+@media screen and (max-width: 965px) {
+    #share h1 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #shareSlider {
+        margin-right: 10%;
+    }
+    #sliderPlus {
+        width: 150px;
+    }
 }
 
 /********** Connect Section **********/
@@ -436,7 +430,6 @@ header {
     height: 570px;
     top: 50px;
     right: 10%;
-    /* border: solid 1px red; */
 }
 
 #phoneVideo2 #phoneBorder2 {
@@ -449,6 +442,8 @@ header {
     top: 14px;
     background: black;
     border-radius: 25px;
+    width: 247px;
+    height: 525px;
 }
 
 @media screen and (max-width: 1255px) {
@@ -458,6 +453,21 @@ header {
     }
     #phoneVideo2 {
         right: 0;
+    }
+}
+@media screen and (max-width: 965px) {
+    #find {
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+    #connect h1 {
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #phoneVideo2 {
+        display: none;
     }
 }
 
@@ -528,6 +538,15 @@ header {
     color: white;
 }
 
+@media screen and (max-width: 965px) {
+    #tags h1, #passions h1, #WhatTalk h1, #WhatTag h1 {
+        font-size: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        width: max-content;
+    }
+}
+
 /********** Exchange section **********/
 
 #exchange {
@@ -559,6 +578,12 @@ header {
     margin-top: 30px;
 }
 
+@media screen and (max-width: 965px) {
+    #exchange {
+        flex-direction: column;
+    }
+}
+
 /********** Find section **********/
 
 #find {
@@ -568,31 +593,23 @@ header {
     margin-bottom: 100px;
 }
 
-#findImg {
-    position: relative;
-    width: 554px;
-    height: 547px;
-    /* border: solid 1px red; */
+#findvid {
+    width: 500px;
+    margin-left: -100px;
 }
 
-#findImg img {
-    position: absolute;
+#findText {
+    margin-left: -100px;
 }
 
-#findImg img:nth-of-type(1) {
-    z-index: 3;
-    top: 50px;
-}
-
-#findImg img:nth-of-type(2) {
-    z-index: 2;
-    top: 15px;
-    left: 40px;
-    width: 510px;
-}
-
-#findImg img:nth-of-type(3) {
-    z-index: 1;
+@media screen and (max-width: 965px) {
+    #find {
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+    #findText {
+        margin: auto;
+    }
 }
 
 /********** Stat section **********/
@@ -610,13 +627,24 @@ header {
     font-size: 58px;
 }
 
-#imgstat {
-    transform: translateX(150%);
-    transition: all 1s cubic-bezier(.61, 1.43, .65, -1.03)
-}
-
-#imgstat.activeimg {
-    transform: translateX(0%);
+@media screen and (max-width: 965px) {
+    #stat {
+        flex-direction: column;
+    }
+    #statText {
+        margin-bottom: 40px;
+    }
+    #statText h1 {
+        font-size: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #pstat {
+        font-size: 16px;
+        Line-height: 40px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /********** Test section **********/
@@ -651,6 +679,17 @@ header {
 #squaresplitch {
     transform: scale(0.2);
     transition: all 1s ease;
+}
+
+@media screen and (max-width: 965px) {
+    #test {
+        flex-direction: column-reverse;
+    }
+    #testText {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+    }
 }
 
 /********** Footer **********/
