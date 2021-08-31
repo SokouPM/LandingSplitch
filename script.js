@@ -132,6 +132,38 @@ $(document).scroll(function () {
 //     });
 // });
 
+/************ Slide background anim ************/
+$(document).scroll(function () {
+
+    const screenHeight = $(window).innerHeight();
+    let revealFromTop = $('#share')[0].getBoundingClientRect().top;
+
+    if (revealFromTop < screenHeight - 150) {
+        $('#backgroundShare1').removeClass('shareBackgroundNotOnScreen');
+        $('#backgroundShare1').addClass('shareBackgroundOnScreen');
+        setTimeout(function () {
+            $('#backgroundShare2').removeClass('shareBackgroundNotOnScreen');
+            $('#backgroundShare2').addClass('shareBackgroundOnScreen');
+        }, 250);
+    } 
+});
+
+/************ connect background anim ************/
+$(document).scroll(function () {
+
+    const screenHeight = $(window).innerHeight();
+    let revealFromTop = $('#connect')[0].getBoundingClientRect().top;
+
+    if (revealFromTop < screenHeight - 150) {
+        $('#backgroundConnect1').removeClass('connectBackgroundNotOnScreen');
+        $('#backgroundConnect1').addClass('connectBackgroundOnScreen');
+        setTimeout(function () {
+            $('#backgroundConnect2').removeClass('connectBackgroundNotOnScreen');
+            $('#backgroundConnect2').addClass('connectBackgroundOnScreen');
+        }, 250);
+    } 
+});
+
 /************ Connect messages anim  ************/
 window.addEventListener('scroll', receiveMessage);
 function receiveMessage() {

@@ -362,11 +362,10 @@ header {
 /********** Share Section **********/
 
 #share {
-    padding: 100px 0;
-    margin-bottom: 50px;
+    padding: 100px 0 200px;
     padding-left: 2%;
     position: relative;
-    background: url(/img/background5.png) no-repeat right top, url(/img/background4.png) no-repeat right bottom;
+    overflow: hidden;
 }
 
 #share h1 {
@@ -393,6 +392,21 @@ header {
     top: 45%;
 }
 
+.backgroundShare {
+    position: absolute;
+    z-index: -10;
+    right: 0;
+    top: 0;
+}
+
+#backgroundShare1 {
+    top: 10px;
+}
+
+#backgroundShare2 {
+    top: 420px;
+}
+
 @media screen and (max-width: 965px) {
     #share h1 {
         margin-left: auto;
@@ -410,6 +424,7 @@ header {
 
 #connect {
     overflow-x: hidden;
+    position: relative;
     padding-bottom: 180px;
 }
 
@@ -419,11 +434,27 @@ header {
     margin-right: 200px;
 }
 
+.backgroundConnect {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -10;
+}
+
+#backgroundConnect1 {
+    top: 95px;
+    left: 23%;
+}
+
+#backgroundConnect2 {
+    top: 200px;
+}
+
 #messagesIconAndVideo {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: url(/img/background1.png) no-repeat top -21px left 31%, url(/img/background2.png) no-repeat top 200px left;
+    /* background: url(/img/background1.png) no-repeat top -21px left 31%, url(/img/background2.png) no-repeat top 200px left; */
 }
 
 #messages {
@@ -445,9 +476,11 @@ header {
 }
 
 #connectIcon {
-    border-radius: 100%;
     margin-left: -10%;
-    box-shadow: 4px 4px 13px -1px rgba(0, 0, 0, 0.11);
+}
+
+#connectIcon img {
+    width: 250px;
 }
 
 #phoneVideo2 {
@@ -521,6 +554,12 @@ header {
     }
 }
 
+@media screen and (max-width: 470px) {
+    #messages div:nth-child(2) {
+        margin-left: 80%;
+    }
+}
+
 /********** All tags (Passions section, WhatTalk section, WhatTag section **********/
 
 #passions, #WhatTalk, #WhatTag {
@@ -574,6 +613,7 @@ header {
     backdrop-filter: blur(15px);
     border-radius: 20px;
     background-color: white;
+    color: #363A65;
 }
 
 .lineTags p:hover {
@@ -585,7 +625,7 @@ header {
     color: white;
 }
 
-.selectedTag {
+p.selectedTag {
     background-image: linear-gradient(to left, #ce16d7, #8d6bff, #2992ff, #0bbef0);
     color: white;
 }

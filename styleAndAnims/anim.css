@@ -68,6 +68,56 @@
     }
 }
 
+/************** Share background animations **************/
+
+.shareBackgroundOnScreen {
+    animation: shareBackgroundAppear 1s;
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+.shareBackgroundNotOnScreen {
+    opacity: 0;
+    transform: translateX(250px) translateY(-150px);
+}
+
+@keyframes shareBackgroundAppear {
+  0% {
+    opacity: 0;
+    transform: translateX(250px) translateY(-150px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+/************** Connect background animations **************/
+
+.connectBackgroundOnScreen {
+    animation: connectBackgroundAppear 1s;
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+.connectBackgroundNotOnScreen {
+    opacity: 0;
+    transform: translateX(-250px) translateY(-150px);
+}
+
+@keyframes connectBackgroundAppear {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px) translateY(-150px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
 /************** Phone2 animations **************/
 
 .phone2OnScreen {
