@@ -15,7 +15,7 @@
 <body>
 
     <header id="topbar">
-        <h1> Splitch</h1>
+        <h1>Splitch</h1>
         <img id="toplogo" src='/img/logo.png'>
         <h3>Télécharger l'App</h3>
     </header>
@@ -29,21 +29,27 @@
         </div>
         <div id="texte">
             <img id="splitchLogo" src=/img/splitch.png>
-            <h1>Fais des rencontres<br> autrement,</h1>
-            <p>Le premier réseau social qui te propose de rencontrer<br> des gens qui partagent les mêmes centres
-                d’intérêts<br> que toi.</p>
-            <div>
-                <div class="borderButton">
-                    <a id="meetButton" class="downloadButon">Je télécharge</a>
+            <div id="meetTextForm">
+                <h1>Fais des rencontres<br> autrement,</h1>
+                <p>Le premier réseau social qui te propose de rencontrer<br> des gens qui partagent les mêmes centres
+                    d’intérêts<br> que toi.</p>
+                <div id="buttonForForm">
+                    <div class="borderButton">
+                        <a id="meetButton" class="downloadButon">Je télécharge</a>
+                    </div>
                 </div>
-            </div>
 
-            <form id="meetForm" class="none" action="/backend/mail.php" method="POST">
-                <input type="text" id="name" name="name" placeholder="Entre ton mail" pattern="[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}" required>
-                <div class="borderButton">
-                    <input type="submit" value="Envoyer">
-                </div>
-            </form>
+                <form id="meetForm" class="none" action="/backend/mail.php" method="POST">
+                    <label for="mail">Pour être le premier à télécharger l'application :</label>
+                    <div class="inputGroup">
+                        <input type="text" id="mail" name="mail" placeholder="Entre ton mail"
+                            pattern="[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}" required>
+                        <div class="borderButton">
+                            <input type="submit" value="Envoyer">
+                        </div>
+                    </div>
+                </form>
+            </div>
             <img class="imgpara imgParaNotVisible" id="question4" src="img/question4.png">
             <img class="imgpara imgParaNotVisible" id="doigts" src="img/doigts.png">
             <img class="imgpara imgParaNotVisible" id="coeurs" src="img/coeurs.png">
@@ -51,7 +57,7 @@
     </section>
 
     <section id="share">
-        <h1>Partage tes passions,<br> découvre, vibre, ressent</h1>
+        <h1>Partage tes passions,<br> découvre, vibre, ressent.</h1>
         <div id="shareSlider">
             <img src="/img/slideImg1.png" alt="">
             <img src="/img/slideImg2.png" alt="">
@@ -80,7 +86,7 @@
     </section>
 
     <section id="passions">
-        <h1 class="tagH1"> <img class="iconquest" src="/img/icon_question.png"> Choisis tes passions</h1>
+        <h1 class="tagH1"> <img class="iconquest" src="/img/icon_question.png"> Choisis tes passions.</h1>
         <div class="tagGroup">
             <div class="lineTags">
                 <p>Mélomane</p>
@@ -104,6 +110,8 @@
                 <p>Dance</p>
                 <p>Netflix</p>
                 <p>Astrologie</p>
+                <p>Jeux de rôle</p>
+                <p>Cinéphile</p>
             </div>
         </div>
     </section>
@@ -156,11 +164,6 @@
             <video src="/img/v1.mp4" width="600px"></video>
         </div>
 
-        <!-- <div id="findImg">
-            <img id="find1" src="/img/findImg2.png" alt="">
-            <img id="find2" src="/img/findImg1.png" alt="">
-            <img id="find3" src="/img/findImg3.png" alt="">
-        </div> -->
         <div id="findText">
             <h1>Trouves ton partner<br> in crime</h1>
             <p>Flash avec des gens avec qui tu as plein de points<br> communs, après à toi de choisir : pote de
@@ -169,7 +172,7 @@
     </section>
 
     <section id="WhatTag">
-        <h1 class="tagH1"> <img class="iconquest" src="/img/icon_question.png"> Plutot quel tag pour toi ?</h1>
+        <h1 class="tagH1"><img class="iconquest" src="/img/icon_question.png"> Plutot quel tag pour toi ?</h1>
         <div class="tagGroup">
             <div class="lineTags">
                 <p>Good vibes</p>
@@ -186,6 +189,14 @@
                 <p>Casse-couille</p>
                 <p>Eternel optimiste</p>
             </div>
+            <div class="lineTags">
+                <p>Boute-en-train</p>
+                <p>Généreux</p>
+                <p>Scociable</p>
+                <p>Comique</p>
+                <p>Artiste</p>
+                <p>Bavard</p>
+            </div>
         </div>
     </section>
 
@@ -199,7 +210,7 @@
     </section>
 
     <section id="test">
-        <img id="squaresplitch" src="/img/SplitchIconSquare.png" alt="">
+        <img id="squaresplitch" class="squareNotActive" src="/img/SplitchIconSquare.png" alt="">
         <div id="testText">
             <img src="/img/splitchColor.png" alt="">
             <p>Soit le premier à tester l’app et reçoit un badge exclusif “Précurseur”<br> dès le lancement ! Le badge
@@ -208,9 +219,13 @@
                 <a id="testButton" class="downloadButon">Je télécharge</a>
             </div>
             <form id="testForm" class="none" action="/backend/mail.php" method="POST">
-                <input type="text" id="name" name="name" placeholder="Entre ton mail" required>
-                <div class="borderButton">
-                    <input type="submit" value="Envoyer">
+                <label for="mail">Pour être le premier à télécharger l'application :</label>
+                <div class="inputGroup">
+                    <input type="text" id="mail" name="mail" placeholder="Entre ton mail"
+                        pattern="[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}" required>
+                    <div class="borderButton">
+                        <input type="submit" value="Envoyer">
+                    </div>
                 </div>
             </form>
         </div>

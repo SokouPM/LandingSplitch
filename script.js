@@ -78,7 +78,7 @@ function parralax() {
         question4.style.top = 85 + actualScrollPos * -0.08 + '%';
         question4.style.right = 5 + actualScrollPos * -0.1 + '%';
 
-        doigts.style.top = 10 + actualScrollPos * -0.1 + '%';
+        doigts.style.top = 9 + actualScrollPos * -0.1 + '%';
         doigts.style.right = 4 + actualScrollPos * -0.02 + '%';
     }
 
@@ -91,7 +91,6 @@ $(document).scroll(function () {
     const screenHeight = $(window).innerHeight();
     let revealFromTop = $('#phoneVideo')[0].getBoundingClientRect().top;
     let revealFromBottom = $('#phoneVideo')[0].getBoundingClientRect().bottom;
-
 
     if (window.screen.width > 965) {
         var revealpoint = 150;
@@ -240,10 +239,24 @@ $(window).scroll(function () {
     const revealpoint = 150;
 
     if (revealfromtopimg < windowheight - revealpoint) {
-        squarefind.addClass('squareactive');
+        squarefind.removeClass('squareNotActive');
+        squarefind.addClass('squareActive');
     }
 });
 
-// console.log($(window).innerHeight());
-// console.log($('#phoneVideo').position().bottom);
-// console.log($('#phoneVideo').height());
+
+/************ Text change ************/
+$(document).ready(function () {
+
+    if (window.screen.width < 965) {
+        $('#WhatTalk>h1').html('<img class="iconquest" src="/img/icon_question.png"> De quoi as-tu envie <br> de parler ?');
+        $('#connect>h1').html('Connecte-toi avec des<br> gens qui te ressemblent.');
+        $('#exchText>p').html('Plutôt d’humeur à discuter, faire une sortie<br> ou lancer un jeu ? À toi de choisir !');
+        $('#statText>p').html('Parce que nous concevons une safe place<br> avec des gens ultra cool, tu rencontreras<br> des gens authentiques avec qui tu pourras<br> partager tous tes centres d’intérêts.');
+        $('#testText>p').html('Soit le premier à tester l’app et reçoit un<br> badge exclusif “Précurseur” dès le<br> lancement ! Le badge sera valable à vie.');
+    }
+    if (window.screen.width < 400) {
+        $('#WhatTag>h1').html('<img class="iconquest" src="/img/icon_question.png"> Plutot quel tag<br> pour toi ?');
+    }
+});
+

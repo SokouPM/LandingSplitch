@@ -91,7 +91,7 @@
 
 @keyframes phone2RotateNotOnScreen {
     from {
-        transform: rotate(0deg);
+        transform: rotate(15deg);
     }
     to {
         transform: rotate(90deg)
@@ -142,7 +142,7 @@
 /*********** Connect Icon animations ************/
 
 .iconOnScreen {
-    animation: showUpIcon 0.5s;
+    animation: showUpIcon 0.4s;
 }
 
 .iconNotOnScreen {
@@ -151,10 +151,13 @@
 }
 
 @keyframes showUpIcon {
-    from {
+    0% {
         transform: scale(0);
     }
-    to {
+    55% {
+        transform: scale(150%)
+    }
+    100% {
         transform: scale(100%)
     }
 }
@@ -194,4 +197,27 @@
 
 #imgstat.activeimg {
     transform: translateX(0%);
+}
+
+/*********** Test Icon animations ************/
+
+.squareActive {
+    animation: showUpTestIcon 1s;
+}
+
+.squareNotActive {
+    opacity: 0;
+    transform: scale(0);
+}
+
+@keyframes showUpTestIcon {
+    0% {
+        transform: scale(0);
+    }
+    55% {
+        transform: scale(150%)
+    }
+    100% {
+        transform: scale(100%)
+    }
 }
