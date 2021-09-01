@@ -145,7 +145,7 @@ $(document).scroll(function () {
             $('#backgroundShare2').removeClass('shareBackgroundNotOnScreen');
             $('#backgroundShare2').addClass('shareBackgroundOnScreen');
         }, 250);
-    } 
+    }
 });
 
 /************ connect background anim ************/
@@ -161,7 +161,7 @@ $(document).scroll(function () {
             $('#backgroundConnect2').removeClass('connectBackgroundNotOnScreen');
             $('#backgroundConnect2').addClass('connectBackgroundOnScreen');
         }, 250);
-    } 
+    }
 });
 
 /************ Connect messages anim  ************/
@@ -232,7 +232,7 @@ $(document).scroll(function () {
 $(document).ready(function () {
     let videoViewed = false;
     $(window).scroll(function () {
-        
+
         console.log(videoViewed);
         const revealfind = $('#findVid');
         const windowheight = window.innerHeight;
@@ -294,3 +294,31 @@ $(document).ready(function () {
     }
 });
 
+
+
+$(document).ready(function () {
+    $('#shareSlider').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 965,
+            settings: {
+              slidesToShow: 3,
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
+});
