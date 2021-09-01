@@ -45,7 +45,7 @@ function parralax() {
         sourire.style.left = 2 + actualScrollPos * -0.02 + '%';
 
         coeurs.style.top = 40 + actualScrollPos * -0.1 + '%';
-        coeurs.style.right = actualScrollPos * -0.02 + '%';
+        coeurs.style.right = -2 + actualScrollPos * -0.02 + '%';
 
         question4.style.top = 75 + actualScrollPos * -0.08 + '%';
         question4.style.right = 5 + actualScrollPos * -0.1 + '%';
@@ -59,9 +59,9 @@ function parralax() {
         sourire.style.left = 2 + actualScrollPos * -0.02 + '%';
 
         coeurs.style.top = 45 + actualScrollPos * -0.1 + '%';
-        coeurs.style.right = actualScrollPos * -0.02 + '%';
+        coeurs.style.right = -2 + actualScrollPos * -0.02 + '%';
 
-        question4.style.top = 85 + actualScrollPos * -0.08 + '%';
+        question4.style.top = 18 + actualScrollPos * -0.08 + '%';
         question4.style.right = 5 + actualScrollPos * -0.1 + '%';
 
         doigts.style.top = 25 + actualScrollPos * -0.1 + '%';
@@ -69,13 +69,13 @@ function parralax() {
 
     } else {
 
-        sourire.style.top = 50 + actualScrollPos * -0.1 + '%';
-        sourire.style.left = 2 + actualScrollPos * -0.02 + '%';
+        sourire.style.top = 44 + actualScrollPos * -0.1 + '%';
+        sourire.style.left = 0 + actualScrollPos * -0.02 + '%';
 
         coeurs.style.top = 40 + actualScrollPos * -0.1 + '%';
-        coeurs.style.right = actualScrollPos * -0.02 + '%';
+        coeurs.style.right = -2 + actualScrollPos * -0.02 + '%';
 
-        question4.style.top = 85 + actualScrollPos * -0.08 + '%';
+        question4.style.top = 18 + actualScrollPos * -0.08 + '%';
         question4.style.right = 5 + actualScrollPos * -0.1 + '%';
 
         doigts.style.top = 9 + actualScrollPos * -0.1 + '%';
@@ -287,6 +287,7 @@ $(document).ready(function () {
         $('#exchText>p').html('Plutôt d’humeur à discuter, faire une sortie<br> ou lancer un jeu ? À toi de choisir !');
         $('#statText>p').html('Parce que nous concevons une safe place<br> avec des gens ultra cool, tu rencontreras<br> des gens authentiques avec qui tu pourras<br> partager tous tes centres d’intérêts.');
         $('#testText>p').html('Soit le premier à tester l’app et reçoit un<br> badge exclusif “Précurseur” dès le<br> lancement ! Le badge sera valable à vie.');
+        $('#findText>p').html('Flash avec des gens avec qui tu as plein<br> de points communs, après à toi de choisir :<br> pote de sortie, meilleur(e) ami(e), double<br> de jeu, ...');
     }
     if (window.screen.width < 400) {
         $('#WhatTag>h1').html('<img class="iconquest" src="/img/icon_question.png"> Plutot quel tag<br> pour toi ?');

@@ -259,6 +259,8 @@ header #toplogo {
 
 #coeurs {
     top: 40%;
+    right: -2%;
+    width: 200px;
 }
 
 #doigts {
@@ -290,7 +292,9 @@ header #toplogo {
         top: 45%;
     }
     #question4 {
-        top: 85%;
+        top: 18%;
+        width: 150px;
+        z-index: -10;
     }
 }
 
@@ -332,7 +336,7 @@ header #toplogo {
     }
     #texte #meetTextForm {
         position: relative;
-        top: 500px;
+        top: 550px;
         width: max-content;
         margin: auto;
     }
@@ -362,16 +366,14 @@ header #toplogo {
         width: 70px;
         top: 40%;
     }
-    #question4 {
-        display: none;
-    }
     #sourire {
-        top: 50%;
+        top: 44%;
+        left: 0%;
         width: 70px;
     }
     @media screen and (max-width: 600px) {
         #phoneVideo {
-            left: -45px;
+            left: -60px;
         }
     }
 }
@@ -702,6 +704,7 @@ p.selectedTag {
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 100px;
+    overflow-x: hidden;
 }
 
 #exchText p {
@@ -729,6 +732,10 @@ p.selectedTag {
 @media screen and (max-width: 965px) {
     #exchange {
         flex-direction: column;
+    }
+    .tagH1 {
+        display: flex;
+        align-items: flex-start;
     }
     #exchImageAndIcons {
         transform: rotate(6.83deg) scale(80%);
@@ -862,4 +869,14 @@ footer {
 footer p {
     margin-left: 5%;
     font-family: "Gilroy_Bold", sans-serif;
+}
+
+@media screen and (max-width: 965px) {
+
+    footer p {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
 }
