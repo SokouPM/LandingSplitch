@@ -232,7 +232,8 @@ $(document).scroll(function () {
 $(document).ready(function () {
     let videoViewed = false;
     $(window).scroll(function () {
-
+        
+        console.log(videoViewed);
         const revealfind = $('#findVid');
         const windowheight = window.innerHeight;
         const revealfromtop = revealfind[0].getBoundingClientRect().top;

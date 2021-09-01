@@ -16,14 +16,14 @@
 header, footer {
     height: 66px;
     background-image: url(/img/topbar.png);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     color: white;
 }
 
 * {
     margin: 0;
     padding: 0;
-    /* border: red solid 1px; */
 }
 
 input {
@@ -164,10 +164,22 @@ header {
     padding: 0 75px;
 }
 
+header #toplogo {
+    width: 38px;
+}
+
 @media screen and (max-width: 965px) {
     header {
         margin-bottom: 20px;
         padding: 0 20px;
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+    header h3 {
+        display: none;
+    }
+    header #toplogo {
+        margin-right: 10px;
     }
 }
 
@@ -357,6 +369,11 @@ header {
         top: 50%;
         width: 70px;
     }
+    @media screen and (max-width: 600px) {
+        #phoneVideo {
+            left: -45px;
+        }
+    }
 }
 
 /********** Share Section **********/
@@ -417,6 +434,12 @@ header {
     }
     #sliderPlus {
         width: 150px;
+    }
+    #backgroundShare1 {
+        display: none;
+    }
+    #backgroundShare2 {
+        top: 370px;
     }
 }
 
@@ -546,6 +569,14 @@ header {
     #messages div:nth-child(2) {
         margin-left: 125%;
     }
+    #backgroundConnect1 {
+        top: 7px;
+        left: -45%;
+    }
+    #backgroundConnect2 {
+        top: 360px;
+        left: -5%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -616,7 +647,28 @@ header {
     color: #363A65;
 }
 
-.lineTags p:hover {
+.circleTags {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.circleTags p {
+    padding: 7px 35px;
+    box-shadow: 4px 4px 13px -1px rgba(0, 0, 0, 0.11);
+    border-radius: 20px;
+    background-color: white;
+    color: #363A65;
+    margin: 1% 10px;
+    white-space: nowrap;
+}
+
+.lineTags p:hover, .circleTags p:hover {
     background-image: linear-gradient(to left, #ce16d7, #8d6bff, #2992ff, #0bbef0);
     -webkit-transition: background-image 1s ease-in-out;
     -moz-transition: background-image 1s ease-in-out;
@@ -743,6 +795,9 @@ p.selectedTag {
         margin-left: auto;
         margin-right: auto;
     }
+    #imgstat {
+        width: 308px;
+    }
 }
 
 /********** Test section **********/
@@ -791,6 +846,9 @@ p.selectedTag {
     }
     #testText form input[type="text"] {
         margin-bottom: 10px;
+    }
+    #squaresplitch {
+        width: 170px;
     }
 }
 
