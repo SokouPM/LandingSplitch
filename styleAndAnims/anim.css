@@ -220,17 +220,17 @@
 }
 
 #find3 {
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
 
 #find2 {
-    transition: all 0.5s;
-    transition-delay: 0.5s;
+    transition: all 0.3s;
+    transition-delay: 0.3s;
 }
 
 #find1 {
-    transition: all 0.5s;
-    transition-delay: 1s;
+    transition: all 0.3s;
+    transition-delay: 0.6s;
 }
 
 #find1.active, #find2.active2, #find3.active3 {

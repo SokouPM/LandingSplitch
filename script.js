@@ -18,7 +18,7 @@ $('#testButton').click(function (e) {
 });
 
 /************ Tags toggle style ************/
-$('.lineTags').delegate('p', 'click', function () {
+$('.circleTags').delegate('p', 'click', function () {
     $(this).toggleClass('selectedTag');
 });
 
@@ -61,7 +61,7 @@ function parralax() {
         coeurs.style.top = 45 + actualScrollPos * -0.1 + '%';
         coeurs.style.right = -2 + actualScrollPos * -0.02 + '%';
 
-        question4.style.top = 18 + actualScrollPos * -0.08 + '%';
+        question4.style.top = 75 + actualScrollPos * -0.08 + '%';
         question4.style.right = 5 + actualScrollPos * -0.1 + '%';
 
         doigts.style.top = 25 + actualScrollPos * -0.1 + '%';
@@ -72,14 +72,14 @@ function parralax() {
         sourire.style.top = 44 + actualScrollPos * -0.1 + '%';
         sourire.style.left = 0 + actualScrollPos * -0.02 + '%';
 
-        coeurs.style.top = 40 + actualScrollPos * -0.1 + '%';
-        coeurs.style.right = -2 + actualScrollPos * -0.02 + '%';
+        coeurs.style.top = 32 + actualScrollPos * -0.1 + '%';
+        coeurs.style.right = 0 + actualScrollPos * -0.02 + '%';
 
-        question4.style.top = 18 + actualScrollPos * -0.08 + '%';
-        question4.style.right = 5 + actualScrollPos * -0.1 + '%';
+        question4.style.top = 25 + actualScrollPos * -0.08 + '%';
+        question4.style.right = 3 + actualScrollPos * -0.1 + '%';
 
-        doigts.style.top = 9 + actualScrollPos * -0.1 + '%';
-        doigts.style.right = 4 + actualScrollPos * -0.02 + '%';
+        doigts.style.top = 10 + actualScrollPos * -0.1 + '%';
+        doigts.style.right = 10 + actualScrollPos * -0.02 + '%';
     }
 
 
@@ -114,23 +114,35 @@ $(document).scroll(function () {
 });
 
 /************ Slide anim ************/
-// $(document).ready(function () {
-//     let slideNumber = 1;
-//     let lastScrollTop = 0;
-
-//     $(document).scroll(function () {
-
-//         let scrollPos = $(document).scrollTop();
-//         let revealfromTop = $('#share')[0].getBoundingClientRect().top;
-
-//         if (revealfromTop <= 60 && revealfromTop >= -100) {
-//             window.location.href = "index.html#share";
-
-//         }
-
-
-//     });
-// });
+$(document).ready(function () {
+    $('#shareSlider').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1180,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 965,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+});
 
 /************ Slide background anim ************/
 $(document).scroll(function () {
@@ -138,7 +150,7 @@ $(document).scroll(function () {
     const screenHeight = $(window).innerHeight();
     let revealFromTop = $('#share')[0].getBoundingClientRect().top;
 
-    if (revealFromTop < screenHeight - 150) {
+    if (revealFromTop < screenHeight - 200) {
         $('#backgroundShare1').removeClass('shareBackgroundNotOnScreen');
         $('#backgroundShare1').addClass('shareBackgroundOnScreen');
         setTimeout(function () {
@@ -154,7 +166,7 @@ $(document).scroll(function () {
     const screenHeight = $(window).innerHeight();
     let revealFromTop = $('#connect')[0].getBoundingClientRect().top;
 
-    if (revealFromTop < screenHeight - 150) {
+    if (revealFromTop < screenHeight - 200) {
         $('#backgroundConnect1').removeClass('connectBackgroundNotOnScreen');
         $('#backgroundConnect1').addClass('connectBackgroundOnScreen');
         setTimeout(function () {
@@ -229,24 +241,24 @@ $(document).scroll(function () {
 });
 
 /************ Find img anim ************/
-$(document).ready(function () {
-    let videoViewed = false;
-    $(window).scroll(function () {
+window.addEventListener('scroll', reveal);
+function reveal() {
 
-        console.log(videoViewed);
-        const revealfind = $('#findVid');
-        const windowheight = window.innerHeight;
-        const revealfromtop = revealfind[0].getBoundingClientRect().top;
-        const revealpoint = 150;
+    const revealfind = document.getElementById('find1');
+    const revealfind2 = document.getElementById('find2');
+    const revealfind3 = document.getElementById('find3');
 
-        if (revealfromtop < windowheight - revealpoint) {
-            if (videoViewed === false) {
-                $('#findVid>video').trigger('play');
-                videoViewed = true;
-            }
-        }
-    })
-});
+    const windowheight = window.innerHeight;
+    const revealfromtop = revealfind.getBoundingClientRect().top;
+    const revealpoint = 150;
+
+    if (revealfromtop < windowheight - revealpoint) {
+
+        revealfind.classList.add('active');
+        revealfind2.classList.add('active2');
+        revealfind3.classList.add('active3');
+    }
+}
 
 /************ Stat img anim ************/
 window.addEventListener('scroll', revealimg);
@@ -292,33 +304,4 @@ $(document).ready(function () {
     if (window.screen.width < 400) {
         $('#WhatTag>h1').html('<img class="iconquest" src="/img/icon_question.png"> Plutot quel tag<br> pour toi ?');
     }
-});
-
-
-
-$(document).ready(function () {
-    $('#shareSlider').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        responsive: [
-          {
-            breakpoint: 965,
-            settings: {
-              slidesToShow: 3,
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-            }
-          }
-          // You can unslick at a given breakpoint now by adding:
-          // settings: "unslick"
-          // instead of a settings object
-        ]
-      });
 });
