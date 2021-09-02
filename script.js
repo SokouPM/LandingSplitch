@@ -114,35 +114,35 @@ $(document).scroll(function () {
 });
 
 /************ Slide anim ************/
-$(document).ready(function () {
-    $('#shareSlider').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1180,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 965,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                }
-            }
-        ]
-    });
-});
+// $(document).ready(function () {
+//     $('#shareSlider').slick({
+//         dots: true,
+//         infinite: true,
+//         speed: 300,
+//         slidesToShow: 4,
+//         slidesToScroll: 1,
+//         responsive: [
+//             {
+//                 breakpoint: 1180,
+//                 settings: {
+//                     slidesToShow: 3,
+//                 }
+//             },
+//             {
+//                 breakpoint: 965,
+//                 settings: {
+//                     slidesToShow: 2,
+//                 }
+//             },
+//             {
+//                 breakpoint: 480,
+//                 settings: {
+//                     slidesToShow: 1,
+//                 }
+//             }
+//         ]
+//     });
+// });
 
 /************ Slide background anim ************/
 $(document).scroll(function () {
@@ -150,7 +150,7 @@ $(document).scroll(function () {
     const screenHeight = $(window).innerHeight();
     let revealFromTop = $('#share')[0].getBoundingClientRect().top;
 
-    if (revealFromTop < screenHeight - 200) {
+    if (revealFromTop < screenHeight - 500) {
         $('#backgroundShare1').removeClass('shareBackgroundNotOnScreen');
         $('#backgroundShare1').addClass('shareBackgroundOnScreen');
         setTimeout(function () {
