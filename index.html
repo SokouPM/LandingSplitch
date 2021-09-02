@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="/img/favicon.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/splide-core.min.css">
+
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
     <link href="/styleAndAnims/style.css" rel="stylesheet">
     <link href="/styleAndAnims/anim.css" rel="stylesheet">
 
@@ -59,15 +61,37 @@
 
     <section id="share">
         <h1>Partage tes passions,<br> découvre, vibre, ressent.</h1>
-        <div id="shareSlider">
-            <div><img src="/img/slideImg1.png" alt=""></div>
-            <div><img src="/img/slideImg2.png" alt=""></div>
-            <div><img src="/img/slideImg3.png" alt=""></div>
-            <div><img src="/img/slideImg1.png" alt=""></div>
-            <div><img src="/img/slideImg2.png" alt=""></div>
-            <div><img src="/img/slideImg3.png" alt=""></div>
+        <div class="splide">
+            <div class="splide__slider">
+                <div class="splide__arrows arrows">
+                    <button class="splide__arrow arrow splide__arrow--next nextPlus"> <img id="sliderPlus" src="/img/sliderPlus.png"
+                            alt="+">
+                    </button>
+                </div>
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img class="slideImg" src="/img/slideImg1.png" alt="">
+                        </li>
+                        <li class="splide__slide">
+                            <img class="slideImg" src="/img/slideImg2.png" alt="">
+                        </li>
+                        <li class="splide__slide">
+                            <img class="slideImg" src="/img/slideImg3.png" alt="">
+                        </li>
+                        <li class="splide__slide">
+                            <img class="slideImg" src="/img/slideImg1.png" alt="">
+                        </li>
+                        <li class="splide__slide">
+                            <img class="slideImg" src="/img/slideImg2.png" alt="">
+                        </li>
+                        <li class="splide__slide">
+                            <img class="slideImg" src="/img/slideImg3.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <img id="sliderPlus" src="/img/sliderPlus.png" alt="+">
         <img src="/img/background5.png" id="backgroundShare1" class="backgroundShare shareBackgroundNotOnScreen" alt="">
         <img src="/img/background4.png" id="backgroundShare2" class="backgroundShare shareBackgroundNotOnScreen" alt="">
     </section>
@@ -233,6 +257,42 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+
+    <script>
+        new Splide('.splide', {
+            type: 'loop',
+            perPage: 5,
+            perMove: 1,
+            rewind: true,
+            gap: 20,
+            focus: 'center',
+            width: '92%',
+            pagination: false,
+            rewind: true,
+            trimSpace: true,
+            arrows: false,
+            classes: {
+                arrows: 'splide__arrows arrows',
+                arrow: 'splide__arrow arrow',
+                next: 'splide__arrow--next nextPlus',
+            },
+            breakpoints: {
+                '1600': {
+                    perPage: 4,
+                },
+                '1300': {
+                    perPage: 3,
+                },
+                '965': {
+                    perPage: 1,
+                    width: '100%',
+                }
+            }
+        }).mount();
+    </script>
+
 
     <script src="script.js"></script>
 </body>

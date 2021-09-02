@@ -20,6 +20,27 @@ header, footer {
     background-size: 100% 100%;
     color: white;
 }
+.splide__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button.splide__arrow {
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    right: -5%;
+    top: 25%;
+    z-index: 10;
+}
+
+@media screen and (max-width: 965px) {
+    button.splide__arrow {
+
+        right: 5%;
+    }
+}
 
 * {
     margin: 0;
@@ -412,11 +433,17 @@ header #toplogo {
     width: 250px;
 }
 
+.slideImg {
+    width: 276;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #sliderPlus {
-    position: absolute;
+    /* position: absolute; */
     width: 200px;
-    right: 1%;
-    top: 45%;
+    /* right: 1%;
+    top: 45%; */
 }
 
 .backgroundShare {
@@ -519,6 +546,7 @@ header #toplogo {
 #messages div:nth-child(3) img {
     width: 300px;
 }
+
 #connectIcon {
     margin-left: -10%;
 }
