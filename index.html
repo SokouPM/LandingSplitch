@@ -62,34 +62,34 @@
     <section id="share">
         <h1>Partage tes passions,<br> découvre, vibre, ressent.</h1>
         <div class="splide">
-            <div class="splide__slider">
-                <div class="splide__arrows arrows">
-                    <button class="splide__arrow arrow splide__arrow--next nextPlus"> <img id="sliderPlus"
-                            src="/img/sliderPlus.png" alt="+">
-                    </button>
-                </div>
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            <img class="slideImg" src="/img/slideImg1.png" alt="">
-                        </li>
-                        <li class="splide__slide">
-                            <img class="slideImg" src="/img/slideImg2.png" alt="">
-                        </li>
-                        <li class="splide__slide">
-                            <img class="slideImg" src="/img/slideImg3.png" alt="">
-                        </li>
-                        <li class="splide__slide">
-                            <img class="slideImg" src="/img/slideImg1.png" alt="">
-                        </li>
-                        <li class="splide__slide">
-                            <img class="slideImg" src="/img/slideImg2.png" alt="">
-                        </li>
-                        <li class="splide__slide">
-                            <img class="slideImg" src="/img/slideImg3.png" alt="">
-                        </li>
-                    </ul>
-                </div>
+            <div class="splide__arrows ">
+                <button class="splide__arrow splide__arrow--prev" style="display: none;"></button>
+                <button class="splide__arrow nextPlus">
+                    <img id="sliderPlus" src="/img/sliderPlus.png" alt="+">
+                </button>
+            </div>
+
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img class="slideImg" src="/img/slideImg1.png" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="slideImg" src="/img/slideImg2.png" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="slideImg" src="/img/slideImg3.png" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="slideImg" src="/img/slideImg1.png" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="slideImg" src="/img/slideImg2.png" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="slideImg" src="/img/slideImg3.png" alt="">
+                    </li>
+                </ul>
             </div>
         </div>
         <img src="/img/background5.png" id="backgroundShare1" class="backgroundShare shareBackgroundNotOnScreen" alt="">
@@ -99,8 +99,10 @@
     <section id="connect">
         <h1>Connecte-toi avec des gens<br> qui te ressemblent.</h1>
         <div id="messagesIconAndVideo">
-            <img src="/img/background1.png" id="backgroundConnect1" class="backgroundConnect shareBackgroundNotOnScreen" alt="">
-            <img src="/img/background2.png" id="backgroundConnect2" class="backgroundConnect shareBackgroundNotOnScreen" alt="">
+            <img src="/img/background1.png" id="backgroundConnect1" class="backgroundConnect shareBackgroundNotOnScreen"
+                alt="">
+            <img src="/img/background2.png" id="backgroundConnect2" class="backgroundConnect shareBackgroundNotOnScreen"
+                alt="">
             <div id="messages">
                 <div class="messNotOnScreen"><img src="/img/question5.png" alt=""></div>
                 <div class="messNotOnScreen"><img src="/img/question6.png" alt=""></div>
@@ -254,46 +256,13 @@
 
     <footer>
         <p>SPLITCH Tous droits réservés 2021</p>
+        <!-- Page created by Pierre Marquet : https://www.linkedin.com/in/pierre-marquet-98987b199/ and Quentin Bayle : https://www.linkedin.com/in/quentin-bayle-b5119318b/ -->
     </footer>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-
-    <script>
-        new Splide('.splide', {
-            type: 'loop',
-            perPage: 5,
-            perMove: 1,
-            rewind: true,
-            gap: 20,
-            focus: 'center',
-            width: '92%',
-            pagination: false,
-            rewind: true,
-            trimSpace: true,
-            arrows: false,
-            classes: {
-                arrows: 'splide__arrows arrows',
-                arrow: 'splide__arrow arrow',
-                next: 'splide__arrow--next nextPlus',
-            },
-            breakpoints: {
-                '1600': {
-                    perPage: 4,
-                },
-                '1300': {
-                    perPage: 3,
-                },
-                '965': {
-                    perPage: 1,
-                    width: '100%',
-                }
-            }
-        }).mount();
-    </script>
-
 
     <script src="script.js"></script>
 </body>

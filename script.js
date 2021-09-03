@@ -118,35 +118,36 @@ $(document).scroll(function () {
 });
 
 /************ Slide anim ************/
-// $(document).ready(function () {
-//     $('#shareSlider').slick({
-//         dots: true,
-//         infinite: true,
-//         speed: 300,
-//         slidesToShow: 4,
-//         slidesToScroll: 1,
-//         responsive: [
-//             {
-//                 breakpoint: 1180,
-//                 settings: {
-//                     slidesToShow: 3,
-//                 }
-//             },
-//             {
-//                 breakpoint: 965,
-//                 settings: {
-//                     slidesToShow: 2,
-//                 }
-//             },
-//             {
-//                 breakpoint: 480,
-//                 settings: {
-//                     slidesToShow: 1,
-//                 }
-//             }
-//         ]
-//     });
-// });
+new Splide('.splide', {
+    type: 'loop',
+    perPage: 5,
+    perMove: 1,
+    gap: 20,
+    width: '92%',
+    pagination: false,
+    trimSpace: true,
+    classes: {
+        arrows: 'splide__arrows',
+        arrow: 'splide__arrow',
+        next: 'nextPlus',
+    },
+    breakpoints: {
+        '1600': {
+            perPage: 4,
+        },
+        '1300': {
+            perPage: 3,
+        },
+        '965': {
+            perPage: 2,
+            width: '92%'
+        },
+        '620': {
+            perPage: 1,
+            width: '100%'
+        }
+    }
+}).mount();
 
 /************ Share background anim ************/
 $(document).scroll(function () {

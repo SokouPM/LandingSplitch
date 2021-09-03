@@ -51,7 +51,7 @@ button.splide__arrow {
     z-index: 10;
 }
 
-@media screen and (max-width: 965px) {
+@media screen and (max-width: 620px) {
     button.splide__arrow {
         right: 10%;
         top: 35%;
@@ -252,7 +252,6 @@ header #toplogo {
     background: black;
     border-radius: 25px;
     width: 300px;
-    /* height: 647px; */
 }
 
 #texte #splitchLogo {
@@ -310,7 +309,7 @@ header #toplogo {
 }
 
 #question7 {
-    width: 100px;
+    width: 120px;
     top: 46%;
     left: 0;
     display: none;
@@ -372,7 +371,6 @@ header #toplogo {
         left: 10px;
         top: 1px;
         width: 192px;
-        /* height: 412px; */
     }
     #texte {
         width: 100%;
@@ -428,28 +426,46 @@ header #toplogo {
         margin-bottom: 10px;
     }
     #doigts {
-        width: 60px;
+        width: 80px;
         top: 10%;
         right: 10%;
     }
     #coeurs {
-        width: 70px;
+        width: 90px;
         top: 32%;
         right: 0%;
     }
     #sourire {
         top: 30%;
         left: 0%;
-        width: 70px;
+        width: 90px;
     }
     #question4 {
         top: 23%;
         right: 0;
-        width: 102px;
+        width: 120px;
         z-index: 10;
+    }
+    #question7 {
+        width: 100px;
     }
 }
 
+
+@media screen and (max-width: 500px) {
+    #doigts {
+        width: 60px;
+    }
+    #coeurs {
+        width: 70px;
+    }
+    #sourire {
+        width: 70px;
+    }
+    #question4 {
+        width: 102px;
+    }
+}
 /********** Share Section **********/
 
 #share {
@@ -988,6 +1004,10 @@ header #toplogo {
 
 #statText h1 {
     font-size: 58px;
+}
+
+#imgstat {
+    width: 500px;
 }
 
 @media screen and (max-width: 965px) {

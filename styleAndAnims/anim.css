@@ -42,7 +42,7 @@
 
 .phone1OnScreen {
     animation: phone1RotateOnScreen 1s;
-    transform: rotate(-deg);
+    transform: rotate(-10deg);
 }
 
 .phone1NotOnScreen {
