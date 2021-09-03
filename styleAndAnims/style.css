@@ -20,11 +20,27 @@ header, footer {
     background-size: 100% 100%;
     color: white;
 }
+
+@media screen and (max-width: 965px) {
+    header, footer {
+        height: 39px;
+    }
+}
+
+#phoneBorder, #phoneBorder2 {
+    visibility: hidden;
+}
+
+video {
+    background: none !important;
+}
+
 .splide__slide {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 button.splide__arrow {
     border: none;
     background: none;
@@ -37,8 +53,8 @@ button.splide__arrow {
 
 @media screen and (max-width: 965px) {
     button.splide__arrow {
-
-        right: 5%;
+        right: 10%;
+        top: 35%;
     }
 }
 
@@ -196,11 +212,15 @@ header #toplogo {
         justify-content: center;
         flex-direction: row-reverse;
     }
+    header h1 {
+        font-size: 27px;
+    }
     header h3 {
         display: none;
     }
     header #toplogo {
         margin-right: 10px;
+        width: 28px;
     }
 }
 
@@ -232,7 +252,7 @@ header #toplogo {
     background: black;
     border-radius: 25px;
     width: 300px;
-    height: 647px;
+    /* height: 647px; */
 }
 
 #texte #splitchLogo {
@@ -245,7 +265,7 @@ header #toplogo {
 }
 
 #texte p {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 #texte .borderButton:not(form .borderButton) {
@@ -287,6 +307,13 @@ header #toplogo {
 #doigts {
     top: 30%;
     right: 10%;
+}
+
+#question7 {
+    width: 100px;
+    top: 46%;
+    left: 0;
+    display: none;
 }
 
 #question4 {
@@ -345,7 +372,7 @@ header #toplogo {
         left: 10px;
         top: 1px;
         width: 192px;
-        height: 412px;
+        /* height: 412px; */
     }
     #texte {
         width: 100%;
@@ -361,11 +388,27 @@ header #toplogo {
         margin-right: auto;
     }
     #texte #meetTextForm {
+        display: flex;
+        flex-direction: column;
         position: relative;
         top: 600px;
         width: max-content;
         margin: auto;
         margin-bottom: 20px;
+    }
+    #texte #meetTextForm h1 {
+        order: 3;
+        margin-top: 30px;
+    }
+    #texte #meetTextForm p {
+        order: 4;
+        margin-bottom: 0;
+    }
+    #texte #meetTextForm button {
+        order: 1;
+    }
+    #texte #meetTextForm form {
+        order: 2;
     }
     #texte h1, #texte p, #texte .borderButton:not(form .borderButton), #texte form {
         margin-left: 0;
@@ -395,14 +438,14 @@ header #toplogo {
         right: 0%;
     }
     #sourire {
-        top: 44%;
+        top: 30%;
         left: 0%;
         width: 70px;
     }
     #question4 {
-        top: 25%;
-        right: 3%;
-        width: 150px;
+        top: 23%;
+        right: 0;
+        width: 102px;
         z-index: 10;
     }
 }
@@ -411,7 +454,6 @@ header #toplogo {
 
 #share {
     padding: 100px 0 200px;
-    padding-left: 2%;
     position: relative;
     overflow: hidden;
 }
@@ -440,10 +482,7 @@ header #toplogo {
 }
 
 #sliderPlus {
-    /* position: absolute; */
     width: 200px;
-    /* right: 1%;
-    top: 45%; */
 }
 
 .backgroundShare {
@@ -462,9 +501,13 @@ header #toplogo {
 }
 
 @media screen and (max-width: 965px) {
+    #share {
+        padding: 10px 0 110px;
+    }
     #share h1 {
         margin-left: auto;
         margin-right: auto;
+        width: 344px;
     }
     #shareSlider {
         margin-right: 10%;
@@ -473,10 +516,13 @@ header #toplogo {
         width: 150px;
     }
     #backgroundShare1 {
-        display: none;
+        top: 50px;
+        right: -100px;
+        height: 300px;
     }
     #backgroundShare2 {
-        top: 370px;
+        top: 330px;
+        right: -70px;
     }
 }
 
@@ -484,71 +530,70 @@ header #toplogo {
 
 #connect {
     overflow-x: hidden;
-    position: relative;
     padding-bottom: 150px;
 }
 
 #connect h1 {
     width: max-content;
     margin-left: auto;
-    margin-right: 200px;
+    margin-right: 150px;
+}
+
+#messagesIconAndVideo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 626px;
 }
 
 .backgroundConnect {
     position: absolute;
-    left: 0;
-    top: 0;
     z-index: -10;
 }
 
 #backgroundConnect1 {
-    top: 95px;
-    left: 23%;
+    top: -50px;
+    right: 50%;
 }
 
 #backgroundConnect2 {
-    top: 350px;
-}
-
-#messagesIconAndVideo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* background: url(/img/background1.png) no-repeat top -21px left 31%, url(/img/background2.png) no-repeat top 200px left; */
+    top: 200px;
+    left: 0;
 }
 
 #messages {
-    display: flex;
-    flex-direction: column;
-    padding-left: 10%;
+    height: 100%;
+    width: 100%;
+}
+
+#messages, #messages div {
+    position: absolute;
 }
 
 #messages div:nth-child(1) {
-    margin-left: 50px;
-}
-
-#messages div:nth-child(1) img {
-    width: 300px;
+    top: 0;
+    left: 12%;
 }
 
 #messages div:nth-child(2) {
-    margin-left: 0;
-}
-
-#messages div:nth-child(2) img {
-    width: 300px;
+    top: 200px;
+    left: 10%;
 }
 
 #messages div:nth-child(3) {
-    margin-left: 100px;
+    top: 400px;
+    left: 15%;
 }
 
-#messages div:nth-child(3) img {
+#messages img {
     width: 300px;
 }
 
 #connectIcon {
-    margin-left: -10%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
 }
 
 #connectIcon img {
@@ -556,11 +601,11 @@ header #toplogo {
 }
 
 #phoneVideo2 {
-    position: relative;
+    position: absolute;
     width: 350px;
     height: 570px;
     top: 50px;
-    margin-right: 4%;
+    right: 10%;
 }
 
 #phoneVideo2 #phoneBorder2 {
@@ -573,78 +618,93 @@ header #toplogo {
     left: 17px;
     top: 5px;
     background: black;
-    border-radius: 25px;
+    border-radius: 30px;
     width: 250px;
-    height: 550px;
+    /* height: 550px; */
 }
 
-@media screen and (max-width: 1255px) {
-    #messages {
-        padding-left: 0;
-        margin-right: 4%;
-    }
+@media screen and (max-width: 1250px) {
     #phoneVideo2 {
-        right: 0;
+        right: 2%;
     }
-}
-
-@media screen and (max-width: 1152px) {
-    #connect h1 {
-        margin-right: 100px;
+    #messages div:nth-child(1) {
+        top: 0;
+        left: 7%;
     }
-    #phoneVideo2 {
-        margin-right: 4%;
+    #messages div:nth-child(2) {
+        top: 200px;
+        left: 5%;
     }
-    #backgroundConnect1 {
-        left: 1%;
+    #messages div:nth-child(3) {
+        top: 400px;
+        left: 10%;
     }
 }
 
 @media screen and (max-width: 965px) {
     #connect {
-        position: relative;
-        padding-bottom: 100px;
+        padding-bottom: 40px;
+        margin-top: -40px;
     }
     #connect h1 {
-        width: max-content;
-        margin-left: auto;
         margin-right: auto;
+        margin-bottom: -10px;
     }
     #phoneVideo2 {
         display: none;
     }
-    #connectIcon {
-        position: absolute;
-        width: max-content;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-    #messages {
-        padding-left: 2%;
+    #messages div:nth-child(1) {
+        top: 440px;
+        left: 7%;
     }
     #messages div:nth-child(2) {
-        margin-left: 125%;
+        top: 0px;
+        left: 1%;
     }
-    #backgroundConnect1 {
-        top: 7px;
-        left: -45%;
+    #messages div:nth-child(3) {
+        top: 260px;
+        left: auto;
+        right: 0;
+    }
+    #question7 {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 834px) {
+    #messages div:nth-child(1) {
+        left: 7%;
+    }
+    #messages div:nth-child(2) {
+        left: -10px;
+    }
+    #messages div:nth-child(3) {
+        right: -10%;
     }
     #backgroundConnect2 {
-        top: 360px;
-        left: -5%;
+        top: 300px;
     }
 }
 
-@media screen and (max-width: 600px) {
-    #messages div:nth-child(2) {
-        margin-left: 100%;
+@media screen and (max-width: 690px) {
+    #messages div:nth-child(3) {
+        right: -224px;
     }
-}
-
-@media screen and (max-width: 470px) {
-    #messages div:nth-child(2) {
-        margin-left: 80%;
+    #backgroundConnect1 {
+        right: 26%;
+        top: 40px;
+        height: 300px;
+    }
+    #backgroundConnect2 {
+        top: 292px;
+        height: 200px;
+    }
+    #connectIcon img {
+        width: 200px;
+    }
+    #messages div:nth-child(1) {
+        top: 400px;
+        left: 2%;
     }
 }
 
@@ -740,7 +800,10 @@ header #toplogo {
 }
 
 @media screen and (max-width: 965px) {
-    #tags h1, #passions h1, #WhatTalk h1, #WhatTag h1 {
+    #passions, #WhatTalk, #WhatTag {
+        margin-bottom: 50px;
+    }
+    #tags h1, #passions h1, #WhatTag h1, #WhatTalk h1 {
         font-size: 30px;
         margin-left: auto;
         margin-right: auto;
@@ -779,6 +842,10 @@ header #toplogo {
     margin-top: 10px;
 }
 
+#exchCursor {
+    display: none;
+}
+
 #exchIcons :nth-child(2) {
     margin-top: 30px;
 }
@@ -787,6 +854,7 @@ header #toplogo {
     #exchange {
         flex-direction: column;
         overflow-x: hidden;
+        margin-bottom: 40px;
     }
     .tagH1 {
         display: flex;
@@ -794,6 +862,17 @@ header #toplogo {
     }
     #exchImageAndIcons {
         transform: rotate(6.83deg) scale(80%);
+        position: relative;
+    }
+    #exchCursor {
+        display: unset;
+        position: absolute;
+        width: 70px;
+        bottom: -25px;
+        left: 53%;
+    }
+    #exchText p {
+        margin-bottom: 40px;
     }
 }
 
@@ -828,7 +907,20 @@ header #toplogo {
 }
 
 #find3 {
+    z-index: 1;
     width: 490px;
+}
+
+#find4 {
+    z-index: 5;
+    width: 600px;
+    left: -45px;
+}
+
+#find5 {
+    z-index: 4;
+    width: 550px;
+    left: -40px;
 }
 
 #findText {
@@ -843,15 +935,16 @@ header #toplogo {
 
 @media screen and (max-width: 965px) {
     #find {
-        flex-direction: column;
+        flex-direction: column-reverse;
         overflow-x: hidden;
         padding-top: 50px;
+        margin-bottom: 0;
+        padding-bottom: 50px;
     }
     #findImg {
         margin-right: 0;
         width: 300px;
         height: 310px;
-        margin-bottom: 20px;
     }
     #findImg img {
         position: absolute;
@@ -868,8 +961,17 @@ header #toplogo {
     #find3 {
         width: 290px;
     }
+    #find4 {
+        width: 350px;
+        left: -20px;
+    }
+    #find5 {
+        width: 350px;
+        left: -20px;
+    }
     #findText {
         margin: auto;
+        margin-bottom: 40px;
     }
 }
 
@@ -927,7 +1029,7 @@ header #toplogo {
 }
 
 #testText img {
-    width: 117px;
+    width: 120px;
     margin-bottom: 20px;
 }
 
@@ -936,7 +1038,7 @@ header #toplogo {
 }
 
 #squaresplitch {
-    width: 300px;
+    width: 230px;
 }
 
 #testForm {
@@ -979,5 +1081,6 @@ footer p {
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+        font-size: 12px;
     }
 }

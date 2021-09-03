@@ -37,6 +37,7 @@ function parralax() {
     let question4 = document.getElementById('question4');
     let doigts = document.getElementById('doigts');
     let sourire = document.getElementById('sourire');
+    let question7 = document.getElementById('question7');
 
     let actualScrollPos = window.scrollY;
 
@@ -69,17 +70,20 @@ function parralax() {
 
     } else {
 
-        sourire.style.top = 44 + actualScrollPos * -0.1 + '%';
+        sourire.style.top = 30 + actualScrollPos * -0.1 + '%';
         sourire.style.left = 0 + actualScrollPos * -0.02 + '%';
 
         coeurs.style.top = 32 + actualScrollPos * -0.1 + '%';
         coeurs.style.right = 0 + actualScrollPos * -0.02 + '%';
 
-        question4.style.top = 25 + actualScrollPos * -0.08 + '%';
-        question4.style.right = 3 + actualScrollPos * -0.1 + '%';
+        question4.style.top = 23 + actualScrollPos * -0.08 + '%';
+        question4.style.right = 0 + actualScrollPos * -0.1 + '%';
 
         doigts.style.top = 10 + actualScrollPos * -0.1 + '%';
         doigts.style.right = 10 + actualScrollPos * -0.02 + '%';
+
+        question7.style.top = 46 + actualScrollPos * -0.08 + '%';
+        question7.style.left = 0 + actualScrollPos * -0.1 + '%';
     }
 
 
@@ -144,7 +148,7 @@ $(document).scroll(function () {
 //     });
 // });
 
-/************ Slide background anim ************/
+/************ Share background anim ************/
 $(document).scroll(function () {
 
     const screenHeight = $(window).innerHeight();
@@ -156,7 +160,7 @@ $(document).scroll(function () {
         setTimeout(function () {
             $('#backgroundShare2').removeClass('shareBackgroundNotOnScreen');
             $('#backgroundShare2').addClass('shareBackgroundOnScreen');
-        }, 250);
+        }, 500);
     }
 });
 
@@ -172,7 +176,7 @@ $(document).scroll(function () {
         setTimeout(function () {
             $('#backgroundConnect2').removeClass('connectBackgroundNotOnScreen');
             $('#backgroundConnect2').addClass('connectBackgroundOnScreen');
-        }, 250);
+        }, 500);
     }
 });
 
@@ -185,8 +189,7 @@ function receiveMessage() {
 
     const windowheight = window.innerHeight;
     const revealfromtopimg = messagesParent.getBoundingClientRect().top;
-    const revealpoint = 200;
-
+    const revealpoint = 400;
 
     if (revealfromtopimg < windowheight - revealpoint) {
         messages[0].classList.add('messOnScreen');
@@ -247,6 +250,8 @@ function reveal() {
     const revealfind = document.getElementById('find1');
     const revealfind2 = document.getElementById('find2');
     const revealfind3 = document.getElementById('find3');
+    const revealfind4 = document.getElementById('find4');
+    const revealfind5 = document.getElementById('find5');
 
     const windowheight = window.innerHeight;
     const revealfromtop = revealfind.getBoundingClientRect().top;
@@ -257,6 +262,8 @@ function reveal() {
         revealfind.classList.add('active');
         revealfind2.classList.add('active2');
         revealfind3.classList.add('active3');
+        revealfind4.classList.add('active4');
+        revealfind5.classList.add('active5');
     }
 }
 
@@ -294,14 +301,17 @@ $(window).scroll(function () {
 $(document).ready(function () {
 
     if (window.screen.width < 965) {
+        $('#share>h1').html('Partage tes passions,<br> découvre, vibre,<br> ressent.');
+        $('#WhatTag>h1').html('<img class="iconquest" src="/img/icon_question.png"> Plutot quel tag pour<br> toi ?');
         $('#WhatTalk>h1').html('<img class="iconquest" src="/img/icon_question.png"> De quoi as-tu envie <br> de parler ?');
         $('#connect>h1').html('Connecte-toi avec des<br> gens qui te ressemblent.');
+        $('#findText>h1').html('Trouves ton<br> partner in crime');
         $('#exchText>p').html('Plutôt d’humeur à discuter, faire une sortie<br> ou lancer un jeu ? À toi de choisir !');
         $('#statText>p').html('Parce que nous concevons une safe place<br> avec des gens ultra cool, tu rencontreras<br> des gens authentiques avec qui tu pourras<br> partager tous tes centres d’intérêts.');
         $('#testText>p').html('Soit le premier à tester l’app et reçoit un<br> badge exclusif “Précurseur” dès le<br> lancement ! Le badge sera valable à vie.');
         $('#findText>p').html('Flash avec des gens avec qui tu as plein<br> de points communs, après à toi de choisir :<br> pote de sortie, meilleur(e) ami(e), double<br> de jeu, ...');
     }
-    if (window.screen.width < 400) {
+    if (window.screen.width < 335) {
         $('#WhatTag>h1').html('<img class="iconquest" src="/img/icon_question.png"> Plutot quel tag<br> pour toi ?');
     }
 });
